@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Politique de confidentialité — AI.Native</title>
+  <meta name="theme-color" content="#0B1020" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+<header class="nav" role="banner">
+  <div class="container nav__inner">
+    <a class="brand" href="../index.html" aria-label="AI.Native — Accueil">
+      <div class="brand__mark" aria-hidden="true">AI</div>
+      <div class="brand__text">
+        <div class="brand__name">AI.Native</div>
+        <div class="brand__tag">Légal</div>
+      </div>
+    </a>
+    <nav class="nav__links" aria-label="Navigation principale">
+  <a data-nav-link href="../index.html">Accueil</a>
+  <a data-nav-link href="../features.html">Features</a>
+  <a data-nav-link href="../pricing.html">Tarifs</a>
+  <a data-nav-link href="../docs/index.html">Wiki</a>
+</nav>
+    <div class="nav__right">
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Changer de thème">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer</a>
+    </div>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <article class="doc">
+      
+<h1>Politique de confidentialité (modèle)</h1>
+<p><em>Ce document est un modèle à adapter avant publication sur le Microsoft Store.</em></p>
+
+<h2>1) Données traitées par l’extension</h2>
+<p>AI.Native traite les données nécessaires à l’exécution des fonctions IA dans Excel : le texte de vos prompts, et éventuellement des valeurs de cellules (plages) que vous fournissez en contexte.</p>
+
+<h2>2) Absence de serveur AI.Native</h2>
+<p>AI.Native ne met pas en place de serveur intermédiaire. Les requêtes sont envoyées directement depuis votre environnement Office vers le fournisseur choisi (OpenAI ou Google Gemini).</p>
+
+<h2>3) Stockage local</h2>
+<ul>
+  <li>Les clés API sont stockées localement (OfficeRuntime.storage ou localStorage).</li>
+  <li>AI.Native peut stocker localement un cache de réponses et des logs techniques (diagnostic).</li>
+</ul>
+
+<h2>4) Partage avec des tiers</h2>
+<p>Les données envoyées via les appels API sont partagées avec le fournisseur choisi (OpenAI ou Google) conformément à leurs conditions et politiques. AI.Native ne revend pas ces données et ne les traite pas sur un serveur propre.</p>
+
+<h2>5) Gestion et suppression</h2>
+<p>Vous pouvez supprimer les caches et logs depuis le panneau AI.Native. Vous pouvez effacer vos clés API depuis le panneau.</p>
+
+<h2>6) Contact</h2>
+<p>Support : <a data-support-email href="mailto:support@example.com">support@example.com</a></p>
+
+    </article>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> AI.Native.</span>
+      <span><a href="../legal/privacy.html">Confidentialité</a> · <a href="../legal/terms.html">Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = String(new Date().getFullYear());</script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

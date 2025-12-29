@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conditions d’utilisation — AI.Native</title>
+  <meta name="theme-color" content="#0B1020" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+<header class="nav" role="banner">
+  <div class="container nav__inner">
+    <a class="brand" href="../index.html" aria-label="AI.Native — Accueil">
+      <div class="brand__mark" aria-hidden="true">AI</div>
+      <div class="brand__text">
+        <div class="brand__name">AI.Native</div>
+        <div class="brand__tag">Légal</div>
+      </div>
+    </a>
+    <nav class="nav__links" aria-label="Navigation principale">
+  <a data-nav-link href="../index.html">Accueil</a>
+  <a data-nav-link href="../features.html">Features</a>
+  <a data-nav-link href="../pricing.html">Tarifs</a>
+  <a data-nav-link href="../docs/index.html">Wiki</a>
+</nav>
+    <div class="nav__right">
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Changer de thème">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer</a>
+    </div>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <article class="doc">
+      
+<h1>Conditions d’utilisation (modèle)</h1>
+<p><em>Ce document est un modèle à adapter avant publication sur le Microsoft Store.</em></p>
+
+<h2>1) Produit</h2>
+<p>AI.Native est une extension Excel qui expose des fonctions IA (namespace <code>AI.*</code>) et permet d’appeler des modèles via des clés API fournies par l’utilisateur.</p>
+
+<h2>2) Comptes et facturation</h2>
+<p>L’abonnement AI.Native couvre l’accès à l’extension et ses mises à jour/support (selon l’offre). Les coûts liés aux appels API sont facturés par le fournisseur (OpenAI / Google) via la clé de l’utilisateur.</p>
+
+<h2>3) Utilisation acceptable</h2>
+<p>Vous vous engagez à respecter :</p>
+<ul>
+  <li>les conditions du Microsoft Store et de Microsoft Office Add-ins,</li>
+  <li>les conditions du fournisseur d’API (OpenAI / Google),</li>
+  <li>la réglementation applicable, notamment en matière de données personnelles.</li>
+</ul>
+
+<h2>4) Limitations</h2>
+<p>Les résultats IA sont générés automatiquement. Vous êtes responsable de valider les sorties (formules, tableaux, décisions) avant utilisation opérationnelle.</p>
+
+<h2>5) Support</h2>
+<p>Support : <a data-support-email href="mailto:support@example.com">support@example.com</a></p>
+
+    </article>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> AI.Native.</span>
+      <span><a href="../legal/privacy.html">Confidentialité</a> · <a href="../legal/terms.html">Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = String(new Date().getFullYear());</script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

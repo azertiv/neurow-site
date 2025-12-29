@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI.FILL — AI.Native Wiki</title>
+  <meta name="description" content="Documentation de la fonction AI.FILL." />
+  <meta name="theme-color" content="#0B1020" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../../assets/styles.css" />
+</head>
+
+<body>
+<a class="skip-link" href="#content">Aller au contenu</a>
+
+<header class="nav" role="banner">
+  <div class="container nav__inner">
+    <a class="brand" href="../../index.html" aria-label="AI.Native — Accueil">
+      <div class="brand__mark" aria-hidden="true">AI</div>
+      <div class="brand__text">
+        <div class="brand__name">AI.Native</div>
+        <div class="brand__tag">Wiki — configuration et référence des fonctions</div>
+      </div>
+    </a>
+
+    <nav class="nav__links" aria-label="Navigation principale">
+  <a data-nav-link href="../../index.html">Accueil</a>
+  <a data-nav-link href="../../features.html">Features</a>
+  <a data-nav-link href="../../pricing.html">Tarifs</a>
+  <a data-nav-link href="../../docs/index.html">Wiki</a>
+</nav>
+
+    <div class="nav__right">
+      <button id="menuToggle" class="icon-btn menu-btn" type="button" aria-label="Ouvrir le menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Changer de thème">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer</a>
+    </div>
+  </div>
+</header>
+
+<div id="drawer" class="drawer" aria-hidden="true">
+  <div class="drawer__backdrop" data-drawer-close></div>
+  <div class="drawer__panel">
+    <div class="drawer__top">
+      <strong>Menu</strong>
+      <button class="icon-btn" data-drawer-close type="button" aria-label="Fermer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <a href="../../index.html">Accueil</a>
+<a href="../../features.html">Features</a>
+<a href="../../pricing.html">Tarifs</a>
+<a href="../../docs/index.html">Wiki</a>
+
+    <a data-store-link href="https://www.microsoft.com/store/apps">Installer</a>
+  </div>
+</div>
+
+<main id="content" class="docs">
+  <div class="container docs__layout">
+    <aside class="sidebar" aria-label="Navigation du wiki">
+  <div class="sidebar__top">
+    <div class="sidebar__search">
+      <input id="docsSearch" type="search" placeholder="Rechercher…" aria-label="Rechercher dans le wiki" />
+    </div>
+  </div>
+
+  <nav id="docsNav" class="sidebar__nav">
+    <div class="sidebar__group" data-nav-group>Bien démarrer</div>
+    <a data-nav-link href="../../docs/index.html">Vue d’ensemble</a>
+    <a data-nav-link href="../../docs/getting-started.html">Installation & première formule</a>
+    <a data-nav-link href="../../docs/configuration.html">Configuration (panneau)</a>
+    <a data-nav-link href="../../docs/models.html">Choisir un modèle (OpenAI/Gemini)</a>
+    <a data-nav-link href="../../docs/api-keys.html">Obtenir une clé API (OpenAI & Gemini)</a>
+
+    <div class="sidebar__group" data-nav-group>Référence</div>
+    <a data-nav-link href="../../docs/functions/ask.html">AI.ASK</a>
+    <a data-nav-link href="../../docs/functions/web.html">AI.WEB</a>
+    <a data-nav-link href="../../docs/functions/translate.html">AI.TRANSLATE</a>
+    <a data-nav-link href="../../docs/functions/classify.html">AI.CLASSIFY</a>
+    <a data-nav-link href="../../docs/functions/extract.html">AI.EXTRACT</a>
+    <a data-nav-link href="../../docs/functions/clean.html">AI.CLEAN</a>
+    <a data-nav-link href="../../docs/functions/consistent.html">AI.CONSISTENT</a>
+    <a data-nav-link href="../../docs/functions/summarize.html">AI.SUMMARIZE</a>
+    <a data-nav-link href="../../docs/functions/formula.html">AI.FORMULA</a>
+    <a data-nav-link href="../../docs/functions/table.html">AI.TABLE</a>
+    <a data-nav-link href="../../docs/functions/fill.html">AI.FILL</a>
+    <a data-nav-link href="../../docs/functions/status-test.html">AI.KEYSTATUS / AI.TEST</a>
+    <a data-nav-link href="../../docs/functions/count.html">AI.COUNT</a>
+
+    <div class="sidebar__group" data-nav-group>Gouvernance</div>
+    <a data-nav-link href="../../docs/privacy.html">Vie privée & données</a>
+    <a data-nav-link href="../../docs/troubleshooting.html">Dépannage</a>
+  </nav>
+</aside>
+    <article class="doc">
+      
+<h1>AI.FILL</h1>
+<p><strong>Signature.</strong> <code>=AI.FILL(exampleRange; targetRange; instruction)</code></p>
+<p>Remplit une colonne cible à partir d’exemples (apprentissage par démonstration).</p>
+
+<h2>Sortie</h2>
+<p>Colonne (spill) alignée sur <code>targetRange</code> (une valeur par ligne).</p>
+
+<h2>Exemples (Excel FR)</h2>
+<pre><code>=AI.FILL(A2:B6; D2:D20; "Normaliser en nom complet")</code></pre>
+<pre><code>=AI.FILL(A2:B10; C2:C100; "Extraire la catégorie produit")</code></pre>
+
+<h2>Conseils</h2>
+<ul>
+<li>Le format attendu est généralement 2 colonnes d’exemples : [entrée | sortie].</li>
+<li>Plus vos exemples couvrent les cas variés, plus le remplissage sera stable.</li>
+<li>Ajoutez une instruction de format (ex. “en MAJUSCULE”, “format ISO date”).</li>
+</ul>
+
+
+    </article>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> AI.Native.</span>
+      <span><a href="../../legal/privacy.html">Confidentialité</a> · <a href="../../legal/terms.html">Conditions</a> · <a data-support-email href="mailto:support@example.com">support@example.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = String(new Date().getFullYear());</script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

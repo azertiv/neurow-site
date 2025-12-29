@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/</loc></url>
+  <url><loc>https://example.com/features.html</loc></url>
+  <url><loc>https://example.com/pricing.html</loc></url>
+  <url><loc>https://example.com/docs/index.html</loc></url>
+  <url><loc>https://example.com/docs/getting-started.html</loc></url>
+  <url><loc>https://example.com/docs/configuration.html</loc></url>
+  <url><loc>https://example.com/docs/models.html</loc></url>
+  <url><loc>https://example.com/docs/api-keys.html</loc></url>
+  <url><loc>https://example.com/docs/privacy.html</loc></url>
+  <url><loc>https://example.com/docs/troubleshooting.html</loc></url>
+
+  <url><loc>https://example.com/docs/functions/ask.html</loc></url>
+  <url><loc>https://example.com/docs/functions/web.html</loc></url>
+  <url><loc>https://example.com/docs/functions/translate.html</loc></url>
+  <url><loc>https://example.com/docs/functions/classify.html</loc></url>
+  <url><loc>https://example.com/docs/functions/extract.html</loc></url>
+  <url><loc>https://example.com/docs/functions/clean.html</loc></url>
+  <url><loc>https://example.com/docs/functions/consistent.html</loc></url>
+  <url><loc>https://example.com/docs/functions/summarize.html</loc></url>
+  <url><loc>https://example.com/docs/functions/formula.html</loc></url>
+  <url><loc>https://example.com/docs/functions/table.html</loc></url>
+  <url><loc>https://example.com/docs/functions/fill.html</loc></url>
+  <url><loc>https://example.com/docs/functions/status-test.html</loc></url>
+  <url><loc>https://example.com/docs/functions/count.html</loc></url>
+
+  <url><loc>https://example.com/legal/privacy.html</loc></url>
+  <url><loc>https://example.com/legal/terms.html</loc></url>
+</urlset>

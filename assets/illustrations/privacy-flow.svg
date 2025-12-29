@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Flux de données : Excel vers l’API, sans serveur intermédiaire">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFB15C" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#F97316" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#FBBF24" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" rx="28" fill="#0b1020"/>
+  <g opacity="0.55">
+    <circle cx="120" cy="110" r="120" fill="#FFB15C" opacity="0.12"/>
+    <circle cx="860" cy="80" r="140" fill="#F97316" opacity="0.10"/>
+    <circle cx="840" cy="500" r="160" fill="#FBBF24" opacity="0.09"/>
+  </g>
+
+  <!-- Excel box -->
+  <g filter="url(#s)">
+    <rect x="90" y="168" width="260" height="210" rx="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.16)"/>
+    <rect x="112" y="194" width="216" height="22" rx="10" fill="rgba(255,255,255,0.06)"/>
+    <rect x="112" y="228" width="216" height="130" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="140" y="212" font-family="ui-sans-serif,system-ui" font-size="13" fill="rgba(255,255,255,0.75)">Excel + AI.Native</text>
+    <text x="140" y="258" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="rgba(255,255,255,0.86)">=AI.WEB(\"Population France 2024\";;1)</text>
+    <text x="140" y="286" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="rgba(255,255,255,0.76)">=AI.CLASSIFY(A2:A50;\"A|B|C\")</text>
+    <text x="140" y="314" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="rgba(255,255,255,0.76)">=AI.FORMULA(\"Somme par région\";A1:C99)</text>
+  </g>
+
+  <!-- API box -->
+  <g filter="url(#s)">
+    <rect x="610" y="168" width="260" height="210" rx="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.16)"/>
+    <text x="640" y="212" font-family="ui-sans-serif,system-ui" font-size="13" fill="rgba(255,255,255,0.75)">API fournisseur (OpenAI / Gemini)</text>
+
+    <g transform="translate(635 242)">
+      <rect x="0" y="0" width="210" height="34" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)"/>
+      <circle cx="20" cy="17" r="8" fill="url(#g1)"/>
+      <text x="38" y="22" font-family="ui-sans-serif,system-ui" font-size="12" fill="rgba(255,255,255,0.80)">Requêtes directes HTTPS</text>
+    </g>
+
+    <g transform="translate(635 286)">
+      <rect x="0" y="0" width="210" height="34" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)"/>
+      <path d="M20 22c6 0 10-5 10-10 0-3-2-6-5-8" fill="none" stroke="url(#g1)" stroke-width="2" stroke-linecap="round"/>
+      <text x="38" y="22" font-family="ui-sans-serif,system-ui" font-size="12" fill="rgba(255,255,255,0.80)">Outils web (si activés)</text>
+    </g>
+
+    <g transform="translate(635 330)">
+      <rect x="0" y="0" width="210" height="34" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)"/>
+      <path d="M16 18h10m-5-5v10" stroke="url(#g1)" stroke-width="2" stroke-linecap="round"/>
+      <text x="38" y="22" font-family="ui-sans-serif,system-ui" font-size="12" fill="rgba(255,255,255,0.80)">Réponses JSON structurées</text>
+    </g>
+  </g>
+
+  <!-- No backend -->
+  <g filter="url(#s)">
+    <rect x="372" y="210" width="216" height="126" rx="22" fill="rgba(255,255,255,0.03)" stroke="rgba(251,113,133,0.35)"/>
+    <text x="400" y="248" font-family="ui-sans-serif,system-ui" font-size="14" fill="rgba(255,255,255,0.88)">Aucun backend</text>
+    <text x="400" y="272" font-family="ui-sans-serif,system-ui" font-size="12" fill="rgba(255,255,255,0.66)">Pas de serveur intermédiaire</text>
+    <text x="400" y="296" font-family="ui-sans-serif,system-ui" font-size="12" fill="rgba(255,255,255,0.66)">Clés, cache et logs</text>
+    <text x="400" y="316" font-family="ui-sans-serif,system-ui" font-size="12" fill="rgba(255,255,255,0.66)">restent en local</text>
+    <path d="M382 230l196 86" stroke="rgba(251,113,133,0.35)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M578 230l-196 86" stroke="rgba(251,113,133,0.35)" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- arrows -->
+  <path d="M360 273h240" stroke="url(#g1)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M595 273l-18-10v20z" fill="url(#g1)"/>
+
+  <text x="480" y="436" text-anchor="middle" font-family="ui-sans-serif,system-ui" font-size="14" fill="rgba(255,255,255,0.76)">
+    Flux : Excel (local) → API (fournisseur) — sans serveur tiers
+  </text>
+</svg>

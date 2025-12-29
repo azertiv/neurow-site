@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tarifs — AI.Native</title>
+  <meta name="description" content="Comparez l’offre gratuite (démo) et l’abonnement Pro pour AI.Native, l’extension Excel qui met l’IA au cœur de vos formules." />
+  <meta name="theme-color" content="#0B1020" />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+
+<body>
+<a class="skip-link" href="#content">Aller au contenu</a>
+
+<header class="nav" role="banner">
+  <div class="container nav__inner">
+    <a class="brand" href="./index.html" aria-label="AI.Native — Accueil">
+      <div class="brand__mark" aria-hidden="true">AI</div>
+      <div class="brand__text">
+        <div class="brand__name">AI.Native</div>
+        <div class="brand__tag">Fonctions IA personnalisées pour Excel</div>
+      </div>
+    </a>
+
+    <nav class="nav__links" aria-label="Navigation principale">
+  <a data-nav-link href="./index.html">Accueil</a>
+  <a data-nav-link href="./features.html">Features</a>
+  <a data-nav-link href="./pricing.html">Tarifs</a>
+  <a data-nav-link href="./docs/index.html">Wiki</a>
+</nav>
+
+    <div class="nav__right">
+      <button id="menuToggle" class="icon-btn menu-btn" type="button" aria-label="Ouvrir le menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Changer de thème">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer</a>
+    </div>
+  </div>
+</header>
+
+<div id="drawer" class="drawer" aria-hidden="true">
+  <div class="drawer__backdrop" data-drawer-close></div>
+  <div class="drawer__panel">
+    <div class="drawer__top">
+      <strong>Menu</strong>
+      <button class="icon-btn" data-drawer-close type="button" aria-label="Fermer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <a href="./index.html">Accueil</a>
+<a href="./features.html">Features</a>
+<a href="./pricing.html">Tarifs</a>
+<a href="./docs/index.html">Wiki</a>
+
+
+    <a data-store-link href="https://www.microsoft.com/store/apps">Installer</a>
+  </div>
+</div>
+
+<main id="content" class="section">
+  <div class="container">
+    <div class="pill reveal"><span class="pill__dot" aria-hidden="true"></span>Tarifs</div>
+    <h1 class="hero__title reveal" style="margin-top:14px;">Une offre simple : vous payez l’extension, vous gardez votre clé API.</h1>
+    <p class="hero__subtitle reveal">
+      AI.Native est pensé comme une couche productivité dans Excel : fonctions IA, réglages centralisés, recherche web, cache et logs.
+      Les tokens restent facturés par le fournisseur (OpenAI ou Google) via votre clé.
+    </p>
+
+    <div class="pricing" style="margin-top: 18px;">
+      <div class="plan reveal">
+        <div class="plan__top">
+          <div>
+            <p class="plan__name">Essai gratuit</p>
+            <p class="plan__tag">Pour tester dans un fichier réel, sans engagement.</p>
+          </div>
+          <span class="badge">Démo</span>
+        </div>
+        <div class="plan__price"><strong>0€</strong><span>/mois</span></div>
+        <ul class="plan__list">
+          <li><strong><span data-free-requests>5</span> requêtes/jour</strong> (limite démonstration)</li>
+          <li>Accès au panneau de configuration</li>
+          <li>Accès aux fonctions AI.* (selon limites démo)</li>
+        </ul>
+        <div class="plan__cta">
+          <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer</a>
+          <a class="btn" href="./docs/getting-started.html">Démarrer</a>
+        </div>
+      </div>
+
+      <div class="plan plan--pro reveal">
+        <div class="plan__top">
+          <div>
+            <p class="plan__name">Pro</p>
+            <p class="plan__tag">Pour un usage intensif dans vos modèles Excel.</p>
+          </div>
+          <span class="badge">Recommandé</span>
+        </div>
+        <div class="plan__price"><strong><span data-price>€5</span></strong><span><span data-period>/mois</span></span></div>
+        <ul class="plan__list">
+          <li>Accès complet à l’extension</li>
+          <li>Recherche web avec sources (AI.WEB)*</li>
+          <li>Cache intelligent (moins de tokens)</li>
+          <li>Logs et estimation de coûts</li>
+          <li>Mises à jour + support</li>
+        </ul>
+        <div class="plan__cta">
+          <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer / S’abonner</a>
+          <a class="btn" href="./docs/api-keys.html">Configurer une clé</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout--warn reveal" style="margin-top: 14px;">
+      <strong>*Notes.</strong> Les fonctionnalités “web search” dépendent du modèle et des capacités du fournisseur. Vos quotas et coûts API sont déterminés par votre compte OpenAI ou Google. 
+    </div>
+
+    <hr class="sep" />
+
+    <h2 class="section__title reveal" style="margin-top: 0;">Comparatif détaillé</h2>
+    <p class="section__lead reveal">Une vue “checklist” pour trancher rapidement.</p>
+
+    <div class="reveal" style="overflow:auto; margin-top: 14px;">
+      <table class="table" aria-label="Comparatif">
+        <thead>
+          <tr>
+            <th>Fonctionnalité</th>
+            <th>Essai gratuit</th>
+            <th>Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Installation depuis Microsoft Store</td>
+            <td>Oui</td>
+            <td>Oui</td>
+          </tr>
+          <tr>
+            <td>Clés API (stockées en local)</td>
+            <td>Oui</td>
+            <td>Oui</td>
+          </tr>
+          <tr>
+            <td>Choix du fournisseur et du modèle dans le panneau</td>
+            <td>Oui</td>
+            <td>Oui</td>
+          </tr>
+          <tr>
+            <td>Max output tokens (réglage unique)</td>
+            <td>Oui</td>
+            <td>Oui</td>
+          </tr>
+          <tr>
+            <td>Fonctions AI.* (ASK, TRANSLATE, …)</td>
+            <td>Limité</td>
+            <td>Complet</td>
+          </tr>
+          <tr>
+            <td>AI.WEB (recherche web + sources)</td>
+            <td>Limité</td>
+            <td>Complet*</td>
+          </tr>
+          <tr>
+            <td>Cache intelligent (moins de tokens)</td>
+            <td>Oui</td>
+            <td>Oui</td>
+          </tr>
+          <tr>
+            <td>Logs + estimation coûts</td>
+            <td>Oui</td>
+            <td>Oui</td>
+          </tr>
+          <tr>
+            <td>Support & mises à jour</td>
+            <td>Best effort</td>
+            <td>Prioritaire</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section section--tight" style="padding-bottom: 0;">
+      <div class="card reveal">
+        <div class="card__kicker">Question fréquente</div>
+        <h3 class="card__title">Pourquoi un abonnement si j’apporte ma clé API ?</h3>
+        <p class="card__text">
+          Parce que la valeur est dans l’<strong>expérience Excel</strong> : fonctions pensées pour les feuilles (spill, batch, formules),
+          UI de configuration, cache, logs, déduplication, et une intégration propre “sans options dans la formule”.
+        </p>
+        <div style="margin-top: 12px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer / S’abonner</a>
+          <a class="btn" href="./docs/index.html">Lire le wiki</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__title">AI.Native</div>
+        <p class="footer__txt">Fonctions IA personnalisées pour Excel (OpenAI / Gemini). Confidentialité par design : configuration, cache et logs restent locaux.</p>
+      </div>
+      <div>
+        <div class="footer__title">Ressources</div>
+        <div class="footer__links">
+          <a href="./docs/getting-started.html">Démarrage</a>
+          <a href="./docs/api-keys.html">Clés API</a>
+          <a href="./docs/models.html">Modèles</a>
+          <a href="./docs/functions/ask.html">Fonctions</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__title">Support</div>
+        <div class="footer__links">
+          <a data-support-email href="mailto:support@example.com">support@example.com</a>
+          <a href="./legal/privacy.html">Confidentialité</a>
+          <a href="./legal/terms.html">Conditions</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> AI.Native.</span>
+      <span>Prix indicatif ; à adapter selon votre publication Store.</span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = String(new Date().getFullYear());</script>
+<script src="./assets/site.js"></script>
+</body>
+</html>

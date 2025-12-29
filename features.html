@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Features — AI.Native</title>
+  <meta name="description" content="Découvrez toutes les fonctionnalités d’AI.Native : custom functions AI dans Excel, choix OpenAI/Gemini, sélection du modèle, AI.WEB avec sources, cache & logs locaux, et vie privée (sans serveur intermédiaire)." />
+  <meta name="theme-color" content="#0B1020" />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+
+<body>
+<a class="skip-link" href="#content">Aller au contenu</a>
+
+<header class="nav" role="banner">
+  <div class="container nav__inner">
+    <a class="brand" href="./index.html" aria-label="AI.Native — Accueil">
+      <div class="brand__mark" aria-hidden="true">AI</div>
+      <div class="brand__text">
+        <div class="brand__name">AI.Native</div>
+        <div class="brand__tag">Fonctions IA personnalisées pour Excel</div>
+      </div>
+    </a>
+
+    <nav class="nav__links" aria-label="Navigation principale">
+      <a data-nav-link href="./index.html">Accueil</a>
+      <a data-nav-link href="./features.html">Features</a>
+      <a data-nav-link href="./pricing.html">Tarifs</a>
+      <a data-nav-link href="./docs/index.html">Wiki</a>
+    </nav>
+
+    <div class="nav__right">
+      <button id="menuToggle" class="icon-btn menu-btn" type="button" aria-label="Ouvrir le menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Changer de thème">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer</a>
+    </div>
+  </div>
+</header>
+
+<div id="drawer" class="drawer" aria-hidden="true">
+  <div class="drawer__backdrop" data-drawer-close></div>
+  <div class="drawer__panel">
+    <div class="drawer__top">
+      <strong>Menu</strong>
+      <button class="icon-btn" data-drawer-close type="button" aria-label="Fermer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <a href="./index.html">Accueil</a>
+    <a href="./features.html">Features</a>
+    <a href="./pricing.html">Tarifs</a>
+    <a href="./docs/index.html">Wiki</a>
+    <a data-store-link href="https://www.microsoft.com/store/apps">Installer</a>
+  </div>
+</div>
+
+<main id="content">
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <div class="pill reveal"><span class="pill__dot" aria-hidden="true"></span>Features</div>
+        <h1 class="hero__title reveal">Tout ce qu’il faut pour mettre l’IA au cœur d’Excel.</h1>
+        <p class="hero__subtitle reveal">
+          AI.Native transforme Excel en environnement IA “formula-first” : vous écrivez <code>AI.*</code> comme une fonction classique,
+          vous choisissez le fournisseur (OpenAI / Gemini) et le modèle dans le panneau, et vous gardez la maîtrise des coûts via votre propre clé API.
+        </p>
+
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer</a>
+          <a class="btn btn--ghost" href="./docs/getting-started.html">Démarrer (Wiki)</a>
+        </div>
+
+        <div class="hero__meta reveal" aria-label="Points clés">
+          <span><span class="kbd">AI.*</span> fonctions IA prêtes</span>
+          <span><span class="kbd">OpenAI/Gemini</span> même fichier, même formules</span>
+          <span><span class="kbd">Ops</span> cache & logs locaux</span>
+          <span><span class="kbd">Privacy</span> sans serveur intermédiaire</span>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__kicker">En pratique</div>
+        <h3 class="card__title">Vous gardez le contrôle</h3>
+        <p class="card__text">
+          L’extension est volontairement “config-driven” : les choix importants se font dans le panneau (fournisseur, modèle, limites),
+          pas dans chaque formule.
+        </p>
+        <ul class="card__list">
+          <li>Un classeur reste lisible, même partagé.</li>
+          <li>Les réglages peuvent être ajustés sans réécrire les formules.</li>
+          <li>Vos données partent directement d’Excel vers l’API du fournisseur.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title reveal">Une bibliothèque de fonctions IA pour vos workflows.</h2>
+      <p class="section__lead reveal">
+        Les fonctions <code>AI.*</code> couvrent les cas d’usage Excel les plus fréquents : rédaction, classification, extraction, génération de formules,
+        structuration en tableau… et recherche web quand vous en avez besoin.
+      </p>
+
+      <div class="grid3">
+        <article class="card reveal">
+          <div class="card__kicker">Texte & analyse</div>
+          <h3 class="card__title">Rédiger, expliquer, résumer</h3>
+          <p class="card__text">Produisez du texte exploitable à partir de cellules, plages ou consignes.</p>
+          <ul class="card__list">
+            <li><code>AI.ASK</code> — question/réponse avec contexte</li>
+            <li><code>AI.SUMMARIZE</code> — synthèse d’un texte ou d’un tableau</li>
+            <li><code>AI.CLEAN</code> — nettoyage et normalisation de texte</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__kicker">Données</div>
+          <h3 class="card__title">Extraire & classer</h3>
+          <p class="card__text">Transformez des données semi-structurées en colonnes utilisables.</p>
+          <ul class="card__list">
+            <li><code>AI.EXTRACT</code> — extraction de champs</li>
+            <li><code>AI.CLASSIFY</code> — catégories, tags, labels</li>
+            <li><code>AI.TABLE</code> — tableau “prêt Excel” en sortie</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__kicker">Automatisation Excel</div>
+          <h3 class="card__title">Formules & remplissage</h3>
+          <p class="card__text">Accélérez la construction de modèles et la mise en forme des sorties.</p>
+          <ul class="card__list">
+            <li><code>AI.FORMULA</code> — génère une formule à partir d’une intention</li>
+            <li><code>AI.FILL</code> — complétion/réécriture sur une plage</li>
+            <li><code>AI.CONSISTENT</code> — cohérence et normalisation</li>
+          </ul>
+        </article>
+      </div>
+
+      <div style="margin-top: 14px; display:flex; gap:10px; flex-wrap:wrap;" class="reveal">
+        <a class="btn btn--primary" href="./docs/functions/ask.html">Voir la référence complète</a>
+        <a class="btn" href="./docs/index.html">Ouvrir le Wiki</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title reveal">Recherche web intégrée, avec des sources.</h2>
+      <p class="section__lead reveal">
+        Besoin d’une information externe dans un tableau Excel ? <code>AI.WEB</code> permet d’interroger le web et de récupérer une réponse exploitable,
+        avec affichage optionnel des sources.
+      </p>
+
+      <div class="grid2">
+        <article class="card reveal">
+          <div class="card__kicker">AI.WEB</div>
+          <h3 class="card__title">Réponse + liens</h3>
+          <p class="card__text">Conçu pour la veille, les benchmarks, la vérification rapide et la génération de notes avec sources.</p>
+          <ul class="card__list">
+            <li>Réponse adaptée à une cellule ou une matrice “spill”.</li>
+            <li>Sources listées sous forme de liens (quand activé).</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__kicker">Structuration</div>
+          <h3 class="card__title">Pensé pour Excel</h3>
+          <p class="card__text">L’objectif n’est pas “un chat dans Excel”, mais des sorties stables et réutilisables dans un modèle.</p>
+          <ul class="card__list">
+            <li>Moins d’options dans les formules : configuration centralisée.</li>
+            <li>Réduction des prompts répétitifs grâce au panneau.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="privacy">
+    <div class="container">
+      <h2 class="section__title reveal">Vie privée : pas de serveur intermédiaire.</h2>
+      <p class="section__lead reveal">
+        AI.Native est conçu pour minimiser l’exposition des données. Vous fournissez votre clé API, et les appels partent directement d’Excel vers
+        l’API du fournisseur choisi (OpenAI ou Gemini).
+      </p>
+
+      <div class="highlight reveal">
+        <div class="highlight__panel">
+          <h3>Flux direct Excel → API</h3>
+          <p>
+            Aucune donnée ne transite par un serveur AI.Native. Les informations envoyées sont uniquement celles que vous mettez dans la formule
+            (texte, cellules, plages). Les clés API, le cache et les logs restent stockés localement sur votre appareil.
+          </p>
+
+          <div class="bullets">
+            <div class="bullet">
+              <div class="bullet__icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.6 9.4-8 10-4.4-.6-8-5-8-10V6l8-4Z" stroke="currentColor" stroke-width="1.8"/></svg>
+              </div>
+              <div class="bullet__text"><strong>Clé API</strong> : vous l’apportez, vous la gardez.</div>
+            </div>
+            <div class="bullet">
+              <div class="bullet__icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <div class="bullet__text"><strong>Nettoyage</strong> : vous pouvez vider cache et logs depuis le panneau.</div>
+            </div>
+            <div class="bullet">
+              <div class="bullet__icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <div class="bullet__text"><strong>Transparence</strong> : les coûts API restent chez le fournisseur.</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn--primary" href="./pricing.html">Voir les tarifs</a>
+            <a class="btn" href="./docs/api-keys.html">Obtenir une clé API</a>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 14px;">
+          <img alt="Flux de données : Excel vers l’API, sans serveur intermédiaire" src="./assets/illustrations/privacy-flow.svg" />
+        </div>
+      </div>
+
+      <div class="callout reveal" style="margin-top:14px;">
+        <strong>Note.</strong> Les données transmises sont ensuite traitées par le fournisseur (OpenAI ou Google) conformément à ses propres conditions et politiques.
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title reveal">Prêt à essayer ?</h2>
+      <p class="section__lead reveal">Installez l’add-in, configurez votre clé, et testez vos premières formules <code>AI.*</code> en quelques minutes.</p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;" class="reveal">
+        <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer depuis Microsoft Store</a>
+        <a class="btn" href="./docs/getting-started.html">Guide de démarrage</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <h3 class="footer__title">AI.Native</h3>
+        <p class="footer__txt">Des <strong>custom functions AI</strong> dans Excel, avec votre clé API. Confidentialité par design : configuration, cache et logs restent locaux.</p>
+      </div>
+      <div>
+        <div class="footer__title">Produit</div>
+        <div class="footer__links">
+          <a href="./features.html">Features</a>
+          <a href="./pricing.html">Tarifs</a>
+          <a href="./docs/index.html">Wiki</a>
+          <a href="./docs/functions/ask.html">Fonctions</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__title">Support</div>
+        <div class="footer__links">
+          <a href="mailto:support@example.com" data-support-email>support@example.com</a>
+          <a href="./legal/privacy.html">Politique de confidentialité</a>
+          <a href="./legal/terms.html">Conditions</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> AI.Native. Tous droits réservés.</span>
+      <span>Microsoft, Excel, OpenAI et Google sont des marques de leurs propriétaires respectifs.</span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = String(new Date().getFullYear());</script>
+<script src="./assets/site.js"></script>
+</body>
+</html>
