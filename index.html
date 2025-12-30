@@ -27,7 +27,10 @@
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__content">
-          <div class="pill reveal"><span class="pill__dot" aria-hidden="true"></span>Compatible OpenAI & Gemini</div>
+          <div style="display:flex; gap:10px; margin-bottom:14px;">
+            <div class="pill pill--openai"><span class="pill__dot" aria-hidden="true"></span>Compatible OpenAI</div>
+            <div class="pill pill--gemini"><span class="pill__dot" aria-hidden="true"></span>Compatible Gemini</div>
+          </div>
           <h1 class="hero__title reveal">L'IA, enfin native dans vos <span class="grad">formules Excel</span>.</h1>
           <p class="hero__subtitle reveal">
             Générez, traduisez, classez et enrichissez vos données directement dans vos cellules.
@@ -36,14 +39,14 @@
           </p>
           <div class="hero__cta reveal">
             <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">
-              Installer l'extension (Gratuit)
+              Installer l'extension
             </a>
             <a class="btn btn--ghost" href="#how-it-works">Comment ça marche ?</a>
           </div>
           <div class="hero__meta reveal" aria-label="Points clés">
             <span><span class="kbd">Simple</span> =AI.ASK(...)</span>
             <span><span class="kbd">Privé</span> Clés stockées localement</span>
-            <span><span class="kbd">Puissant</span> Modèles GPT-4o / Gemini 1.5</span>
+            <span><span class="kbd">Puissant</span> Modèles GPT-4o / Gemini 1.5 Pro</span>
           </div>
         </div>
 
@@ -108,7 +111,7 @@
     </section>
 
     <!-- 2. DEMARRAGE EXPRESS -->
-    <section id="how-it-works" class="section section--tight">
+    <section id="how-it-works" class="section">
       <div class="container">
         <h2 class="section__title reveal" style="text-align:center; margin-bottom:40px;">Démarrage express</h2>
         <div class="kpi reveal">
@@ -224,7 +227,7 @@
     </section>
 
     <!-- 4. USE CASES (POUR QUI ?) -->
-    <section class="section section--tight" style="background: rgba(255,255,255,0.02);">
+    <section class="section" style="background: rgba(255,255,255,0.02);">
       <div class="container">
         <div class="section__head">
           <h2 class="section__title reveal">Pour qui ?</h2>
@@ -271,6 +274,19 @@
               support ou de feedbacks clients.
             </p>
           </article>
+          <article class="card reveal">
+            <div class="card__icon" style="margin-bottom:14px; color:#a78bfa;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h3 class="card__title">Particuliers</h3>
+            <p class="card__text">
+              Comparatifs de produits, gestion de budget, organisation de voyages... L'IA vous aide à tout structurer
+              dans votre tableur personnel.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -279,7 +295,7 @@
     <section class="section">
       <!-- NOTE: removed 'privacy-box' class to blend with background as requested -->
       <div class="container reveal">
-        <div class="privacy-box">
+        <div class="privacy-box privacy-box--premium" style="padding: 40px; border-radius: var(--radius2);">
           <div class="privacy-badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
@@ -301,7 +317,7 @@
                 </svg></div>
               <div>
                 <strong style="display:block; margin-bottom:4px; font-size:16px;">BYOK (Bring Your Own Key)</strong>
-                <span style="color:var(--muted);">Vous utilisez votre propre clé API personnelle. Aucune majoration sur
+                <span class="muted">Vous utilisez votre propre clé API personnelle. Aucune majoration sur
                   les prix.</span>
               </div>
             </div>
@@ -313,7 +329,7 @@
                 </svg></div>
               <div>
                 <strong style="display:block; margin-bottom:4px; font-size:16px;">Zéro Intermédiaire</strong>
-                <span style="color:var(--muted);">Vos données ne transitent jamais par nos serveurs. Le flux est crypté
+                <span class="muted">Vos données ne transitent jamais par nos serveurs. Le flux est crypté
                   de bout en bout.</span>
               </div>
             </div>
@@ -325,68 +341,98 @@
                 </svg></div>
               <div>
                 <strong style="display:block; margin-bottom:4px; font-size:16px;">Stockage Local</strong>
-                <span style="color:var(--muted);">Les caches, historiques et logs sont stockés sur votre machine pour
+                <span class="muted">Les caches, historiques et logs sont stockés sur votre machine pour
                   une confidentialité totale.</span>
               </div>
             </div>
           </div>
 
           <div style="margin-top: 40px; text-align:center;">
-            <a class="btn btn--ghost" href="./legal/privacy.html">Lire la politique de confidentialité</a>
+            <!-- Forced white style for the button in this context -->
+            <a class="btn btn--ghost" href="./legal/privacy.html"
+              style="color:white; border-color:rgba(255,255,255,0.2);">Lire la politique de confidentialité</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- 6. PRICING (TARIFICATION) -->
-    <section class="section section--tight">
+    <section class="section">
       <div class="container">
         <div class="section__head" style="flex-direction:column; align-items: flex-start; gap:8px;">
-          <h2 class="section__title reveal">Tarification Transparente</h2>
+          <h2 class="section__title reveal">Tarification</h2>
           <p class="section__lead reveal">
             Neurow est un logiciel "Buy Once". Vous payez l'outil, puis vous payez votre consommation IA directement
             au fournisseur à prix coûtant.
           </p>
-          <a href="./pricing.html" class="btn btn--ghost" style="margin-top:12px;">Voir les détails de l'offre
-            &rarr;</a>
         </div>
 
-        <div class="pricing">
-          <div class="plan reveal">
-            <div class="plan__top">
-              <p class="plan__name">Gratuit</p>
-              <span class="badge">Essai</span>
-            </div>
-            <div class="plan__price"><strong>0€</strong></div>
-            <ul class="plan__list">
-              <li>5 requêtes / jour</li>
-              <li>Accès à toutes les fonctions</li>
-              <li>Support communautaire</li>
-            </ul>
-            <div class="plan__cta">
-              <a class="btn btn--primary" href="https://www.microsoft.com/store/apps">Installer</a>
-            </div>
-          </div>
+        <div class="pricing-grid pricing-grid--2col">
+          <!-- PRO PLAN -->
           <div class="plan plan--pro reveal">
             <div class="plan__top">
-              <p class="plan__name">Pro</p>
-              <span class="badge">Illimité</span>
+              <div>
+                <p class="plan__name">Pro</p>
+                <p class="plan__tag">Productivité illimitée pour vos modèles.</p>
+              </div>
+              <span class="badge">Recommandé</span>
             </div>
-            <div class="plan__price"><strong>$5.99</strong><span>/mois</span></div>
+            <div class="plan__price">
+              <div><strong>$5.99</strong><span>/mois</span></div>
+              <div style="font-size: 0.55em; color: var(--ok); margin-top: 4px; font-weight: 600;">ou <strong>$59 /
+                  an</strong> (2 mois offerts)</div>
+            </div>
             <ul class="plan__list">
-              <li><strong>Requêtes illimitées</strong></li>
-              <li>Tableau de bord de consommation</li>
-              <li>Cache intelligent (économies d'API)</li>
+              <li>Requêtes <strong>illimitées</strong></li>
+              <li>Accès complet à toutes les fonctions</li>
+              <li>Recherche web avec sources (AI.WEB)</li>
+              <li>Cache intelligent & Logs détaillés</li>
               <li>Support prioritaire</li>
             </ul>
             <div class="plan__cta">
-              <a class="btn btn--primary" href="https://www.microsoft.com/store/apps">S'abonner</a>
+              <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer /
+                S’abonner</a>
+            </div>
+          </div>
+
+          <!-- SIMULATION -->
+          <div class="card card--simulation reveal">
+            <div class="card__kicker">Simulation de coût</div>
+            <h3 class="card__title">Combien ça coûte au total ?</h3>
+            <div class="card__text" style="flex:1;">
+              <p style="margin-bottom: 0; font-size:15px; color:var(--muted);">
+                L'abonnement Neurow (5.99$) s'ajoute au coût de vos tokens API (souvent négligeable).
+              </p>
+
+              <div class="receipt">
+                <div class="receipt__row">
+                  <span>Abonnement Neurow</span>
+                  <strong>$5.99 / mois</strong>
+                </div>
+                <div class="receipt__row">
+                  <span> Coût API <br><small style="opacity:0.7;">(ex: Gemini 3.0 Flash)</small></span>
+                  <strong>+ $1.50 / mois</strong>
+                </div>
+                <div class="receipt__row receipt__row--total">
+                  <span>Total estimé</span>
+                  <span>~ $7.50 / mois</span>
+                </div>
+              </div>
+
+              <div style="margin-top:14px; font-size:13px; color:var(--muted); opacity:0.8;">
+                *Basé sur usage intensif (~1000 requêtes/mois).
+              </div>
             </div>
           </div>
         </div>
-        <div class="callout reveal" style="margin-top:20px; font-size:14px; color:var(--muted);">
-          <strong>Note :</strong> L'abonnement couvre l'utilisation de l'extension. Les frais d'API (OpenAI/Google) sont
-          à votre charge (souvent < 1$/mois pour un usage normal). </div>
+
+        <div style="margin-top:24px; text-align:center;">
+          <a href="./pricing.html" class="btn btn--ghost">Voir plus de détails &rarr;</a>
+          <div class="callout reveal"
+            style="margin-top:20px; font-size:13px; color:var(--muted); border:0; background:transparent;">
+            <strong>Note :</strong> L'abonnement couvre l'utilisation de l'extension. Les frais d'API (OpenAI/Google)
+            sont à votre charge.
+          </div>
         </div>
     </section>
 
