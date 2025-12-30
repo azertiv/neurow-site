@@ -22,7 +22,7 @@
     <rect x="90" y="168" width="260" height="210" rx="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.16)"/>
     <rect x="112" y="194" width="216" height="22" rx="10" fill="rgba(255,255,255,0.06)"/>
     <rect x="112" y="228" width="216" height="130" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)"/>
-    <text x="140" y="212" font-family="ui-sans-serif,system-ui" font-size="13" fill="rgba(255,255,255,0.75)">Excel + AI.Native</text>
+    <text x="140" y="212" font-family="ui-sans-serif,system-ui" font-size="13" fill="rgba(255,255,255,0.75)">Excel + Neurow</text>
     <text x="140" y="258" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="rgba(255,255,255,0.86)">=AI.WEB(\"Population France 2024\";;1)</text>
     <text x="140" y="286" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="rgba(255,255,255,0.76)">=AI.CLASSIFY(A2:A50;\"A|B|C\")</text>
     <text x="140" y="314" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="rgba(255,255,255,0.76)">=AI.FORMULA(\"Somme par région\";A1:C99)</text>

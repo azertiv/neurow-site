@@ -1,5 +1,5 @@
 /*
-  AI.Native marketing site (static)
+  Neurow marketing site (static)
   - Modern SaaS landing + docs
   - No external runtime dependencies
 */
@@ -1530,17 +1530,16 @@ h3[id] {
 
 /* Privacy Box (Enhanced) */
 .privacy-box {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius2);
   padding: 48px;
   text-align: center;
-  max-width: 900px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow);
 }
 
 .privacy-box::before {
@@ -1550,7 +1549,7 @@ h3[id] {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .privacy-badge {

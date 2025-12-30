@@ -1,7 +1,7 @@
 # README DE L'EXTENSION EXCEL
-# AI.Native (Gemini + OpenAI) - Add-in Excel
+# Neurow (Gemini + OpenAI) - Add-in Excel
 
-Add-in Excel AI.Native de fonctions personnalisees pour interroger Gemini 3 Flash et OpenAI GPT-5 mini directement dans des formules, sans backend.
+Add-in Excel Neurow de fonctions personnalisees pour interroger Gemini 3 Flash et OpenAI GPT-5 mini directement dans des formules, sans backend.
 
 ## Fonctionnalites principales
 - Fonctions personnalisees sous le namespace `AI` (ASK, WEB, TRANSLATE, etc.).
@@ -28,8 +28,8 @@ Points clefs du flux :
 - `AI.WEB` utilise les outils web des providers (Gemini `google_search`, OpenAI `web_search`) avec fallback si non supporte.
 - Aucune temperature ou top-p n'est envoyee.
 
-## Configuration dans Excel (panneau "AI.Native")
-1. Ouvrir le panneau depuis le ruban Excel (bouton "AI.Native").
+## Configuration dans Excel (panneau "Neurow")
+1. Ouvrir le panneau depuis le ruban Excel (bouton "Neurow").
 2. Choisir le fournisseur par defaut (Gemini ou OpenAI).
 3. Definir le max output tokens (unique pour les deux providers).
 4. Renseigner la cle API et le modele pour chaque provider.

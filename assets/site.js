@@ -1,7 +1,7 @@
-/* AI.Native marketing site (static) */
+/* Neurow marketing site (static) */
 
 const SITE = {
-  product: "AI.Native",
+  product: "Neurow",
   tagline: "L’IA au cœur d’Excel.",
   // TODO: Remplacer par l’URL Microsoft Store de votre add-in (ou une redirection).
   microsoftStoreUrl: "https://www.microsoft.com/store/apps",
@@ -34,13 +34,13 @@ function applyConfig() {
 function setTheme(theme) {
   const t = theme === "light" ? "light" : "dark";
   document.documentElement.setAttribute("data-theme", t);
-  localStorage.setItem("ainative_theme", t);
+  localStorage.setItem("neurow_theme", t);
   const btn = $("#themeToggle");
   if (btn) btn.setAttribute("aria-label", t === "light" ? "Passer en mode sombre" : "Passer en mode clair");
 }
 
 function initTheme() {
-  const saved = localStorage.getItem("ainative_theme");
+  const saved = localStorage.getItem("neurow_theme");
   if (saved === "light" || saved === "dark") setTheme(saved);
   else {
     // Default: dark, but respect user OS preference
@@ -247,4 +247,47 @@ document.addEventListener("DOMContentLoaded", () => {
   initActiveNav();
   initDocsSearch();
   enhanceCodeBlocks();
+  initCannyBanner();
 });
+
+function initCannyBanner() {
+  const banner = document.createElement("a");
+  banner.href = "https://neurow.canny.io/feature-requests";
+  banner.target = "_blank";
+  banner.className = "feedback-banner";
+  banner.textContent = "Feedback";
+
+  // Inject banner styling
+  const style = document.createElement("style");
+  style.textContent = `
+    .feedback-banner {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--a1); /* Orange */
+      color: white;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 9999;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .feedback-banner::before {
+      content: "💬"; 
+      font-size: 16px;
+    }
+    .feedback-banner:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+      color: white;
+    }
+  `;
+  document.head.appendChild(style);
+  document.body.appendChild(banner);
+}
