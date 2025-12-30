@@ -360,23 +360,75 @@
         <div class="faq">
           <details class="faq__item reveal">
             <summary>Mes données sont-elles confidentielles ?</summary>
-            <p>Oui. L'extension fait le pont directement entre Excel et l'IA (OpenAI ou Gemini). Nous n'avons aucun
-              accès à vos données, et vos clés d'accès restent stockées sur votre ordinateur.</p>
+            <p>Absolument. Neurow est conçu sur une architecture <strong>"No Backend"</strong>. Vos données transitent
+              directement de votre tableau Excel vers l'API du fournisseur (OpenAI ou Google) sans jamais passer par nos
+              serveurs intermédiaires.</p>
+            <ul>
+              <li>Vos clés API sont stockées <strong>localement</strong> sur votre ordinateur (cryptées).</li>
+              <li>L'historique et le cache sont conservés uniquement sur votre machine.</li>
+              <li>C'est vous qui détenez la relation avec le fournisseur d'IA.</li>
+            </ul>
           </details>
+
+          <details class="faq__item reveal">
+            <summary>Quels modèles d'IA puis-je utiliser ?</summary>
+            <p>Vous avez le contrôle total et accès aux modèles les plus récents. Le choix se fait en un clic dans le
+              panneau latéral, sans toucher à vos formules.</p>
+            <ul>
+              <li><strong>Google Gemini :</strong> Gemini 3.0 Flash (recommandé pour la vitesse), Gemini 3.0 Pro, Gemini
+                2.5 Flash-Lite.</li>
+              <li><strong>OpenAI :</strong> GPT-5 Mini (recommandé), GPT-5.2, GPT-5 Nano.</li>
+              <li>Vous pouvez également saisir manuellement tout nouveau modèle compatible dès sa sortie.</li>
+            </ul>
+          </details>
+
           <details class="faq__item reveal">
             <summary>Ai-je besoin d'un abonnement ChatGPT ou Gemini ?</summary>
-            <p>Non, mais il vous faut une "clé API". C'est un code qui permet d'utiliser l'IA. Vous pouvez en créer une
-              gratuitement sur les sites développeurs d'OpenAI ou Google (Google offre même un accès gratuit généreux).
-            </p>
+            <p>Non, les abonnements "Grand Public" (type ChatGPT Plus) ne sont pas utilisés. Vous avez besoin d'une
+              <strong>Clé API</strong>.</p>
+            <ul>
+              <li><strong>Chez Google :</strong> Les clés API (Google AI Studio) offrent souvent un quota gratuit
+                généreux, idéal pour démarrer.</li>
+              <li><strong>Chez OpenAI :</strong> Il s'agit d'un système de crédits prépayés (Pay-as-you-go). Vous ne
+                payez que ce que vous consommez réellement (souvent quelques centimes pour des milliers de cellules).
+              </li>
+            </ul>
           </details>
+
+          <details class="faq__item reveal">
+            <summary>Quelle différence avec Microsoft Copilot ?</summary>
+            <p>Copilot est un assistant conversationnel généraliste. Neurow est une <strong>boîte à outils pour
+                bâtisseurs</strong>.</p>
+            <ul>
+              <li><strong>Précision :</strong> Utilisez des fonctions dédiées (<code>AI.EXTRACT</code>,
+                <code>AI.CLASSIFY</code>) directement dans vos flux de données.</li>
+              <li><strong>Cache Intelligent :</strong> Neurow garde en mémoire les résultats pour ne pas repayer si vous
+                relancez un calcul.</li>
+              <li><strong>Flexibilité :</strong> Choisissez le modèle exact, la "température" et l'effort de
+                raisonnement adaptés à votre métier.</li>
+            </ul>
+          </details>
+
+          <details class="faq__item reveal">
+            <summary>Quelles sont les fonctions incluses ?</summary>
+            <p>Neurow ajoute une suite de fonctions natives à Excel :</p>
+            <ul>
+              <li><code>=AI.ASK(...)</code> : Instructions libres.</li>
+              <li><code>=AI.WEB(...)</code> : Recherche web en temps réel avec citations de sources.</li>
+              <li><code>=AI.TRANSLATE(...)</code> : Traduction rapide de cellules ou plages.</li>
+              <li><code>=AI.CLASSIFY(...)</code> : Catégorisation automatique (Lead, Ticket, Sentiment...).</li>
+              <li><code>=AI.EXTRACT(...)</code> : Extraction structurée (Emails, Dates, Montants).</li>
+            </ul>
+          </details>
+
           <details class="faq__item reveal">
             <summary>Est-ce compatible avec mon ordinateur ?</summary>
-            <p>Oui, AI.Native fonctionne sur Excel pour Windows, Excel pour Mac, et Excel Online (Web).</p>
-          </details>
-          <details class="faq__item reveal">
-            <summary>Quelle différence avec Copilot ?</summary>
-            <p>Vous payez votre consommation au réel (souvent quelques centimes) au lieu d'un abonnement mensuel élevé.
-              De plus, vous avez le choix du modèle d'IA et plus de contrôle sur les résultats.</p>
+            <p>Oui. Neurow est un "Office Add-in" moderne. Il fonctionne partout où Excel moderne fonctionne :</p>
+            <ul>
+              <li><strong>Windows / Mac :</strong> Excel Desktop.</li>
+              <li><strong>Web :</strong> Excel Online (dans votre navigateur).</li>
+            </ul>
+            <p>L'installation se fait en un clic via le Microsoft Store, sans droits d'administrateur complexes.</p>
           </details>
         </div>
       </div>

@@ -1301,3 +1301,228 @@ h2[id],
 h3[id] {
   scroll-margin-top: calc(var(--navh) + 18px);
 }
+
+/* Features Page Redesign */
+
+/* Large gradient text */
+.gradient-text-lg {
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  background: linear-gradient(135deg, var(--txt) 30%, rgba(255, 255, 255, 0.4));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0 0 20px;
+}
+
+[data-theme="light"] .gradient-text-lg {
+  background: linear-gradient(135deg, var(--txt) 30%, rgba(9, 18, 43, 0.4));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Feature Sections (Zig Zag) */
+.feature-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.feature-section:nth-child(even) {
+  direction: rtl;
+  /* Flip visual order */
+}
+
+/* Reset text direction for content inside flipped sections */
+.feature-section:nth-child(even)>* {
+  direction: ltr;
+}
+
+.feature-section__text {
+  max-width: 480px;
+}
+
+.feature-section__visual {
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .feature-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  .feature-section:nth-child(even) {
+    direction: ltr;
+  }
+
+  .feature-section__text {
+    margin: 0 auto;
+  }
+}
+
+/* Excel Mockup (Pure CSS) */
+.excel-mockup {
+  background: var(--bg1);
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  font-family: var(--sans);
+  font-size: 13px;
+  position: relative;
+}
+
+.excel-mockup__ribbon {
+  background: #107c41;
+  /* Excel green */
+  height: 8px;
+  width: 100%;
+}
+
+.excel-mockup__bar {
+  background: var(--bg0);
+  border-bottom: 1px solid var(--stroke);
+  padding: 8px 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-family: var(--mono);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.excel-mockup__grid {
+  display: grid;
+  grid-template-columns: 40px repeat(3, 1fr);
+  background: var(--stroke);
+  gap: 1px;
+}
+
+.excel-mockup__cell {
+  background: var(--bg1);
+  padding: 8px 12px;
+  color: var(--txt);
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.excel-mockup__cell--hdr {
+  background: var(--bg0);
+  color: var(--muted);
+  justify-content: center;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.excel-mockup__cell--active {
+  position: relative;
+}
+
+.excel-mockup__cell--active::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #107c41;
+  pointer-events: none;
+}
+
+.excel-mockup__cell--formula {
+  color: #4ade80;
+  /* Green text for formula result or input */
+}
+
+[data-theme="light"] .excel-mockup {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .excel-mockup__bar {
+  background: #f8f9fa;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .excel-mockup__grid {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .excel-mockup__cell {
+  background: #fff;
+  color: #333;
+}
+
+[data-theme="light"] .excel-mockup__cell--hdr {
+  background: #f3f2f1;
+}
+
+[data-theme="light"] .excel-mockup__cell--formula {
+  color: #107c41;
+}
+
+/* Glass Panel (Privacy Shield) */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.glass-panel__icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--a1), var(--a3));
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 24px;
+  color: white;
+  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+}
+
+/* Feature List (Checkmarks) */
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.feature-list__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.feature-list__icon {
+  width: 20px;
+  height: 20px;
+  color: var(--ok);
+  flex-shrink: 0;
+}
+
+/* Tag style for function names */
+.func-tag {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  background: rgba(249, 115, 22, 0.15);
+  color: var(--a1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(249, 115, 22, 0.2);
+}

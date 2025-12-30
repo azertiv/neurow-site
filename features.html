@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Features — AI.Native</title>
   <meta name="description"
-    content="Découvrez toutes les fonctionnalités d’AI.Native : custom functions AI dans Excel, choix OpenAI/Gemini, sélection du modèle, AI.WEB avec sources, cache & logs locaux, et vie privée (sans serveur intermédiaire)." />
+    content="Découvrez les 14 fonctions AI pour Excel : génération de texte, extraction de données, recherche web, nettoyage et automation. Tout en local, sans serveur intermédiaire." />
   <meta name="theme-color" content="#0B1020" />
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="./assets/styles.css" />
@@ -27,7 +27,7 @@
 
       <nav class="nav__links" aria-label="Navigation principale">
         <a data-nav-link href="./index.html">Accueil</a>
-        <a data-nav-link href="./features.html">Features</a>
+        <a data-nav-link href="./features.html" aria-current="page">Features</a>
         <a data-nav-link href="./pricing.html">Tarifs</a>
         <a data-nav-link href="./docs/index.html">Wiki</a>
       </nav>
@@ -77,265 +77,332 @@
   </div>
 
   <main id="content">
-    <section class="hero">
-      <div class="container hero__grid">
-        <div style="grid-column: 1 / -1; max-width: 800px;">
-          <div class="pill reveal"><span class="pill__dot" aria-hidden="true"></span>Fonctions</div>
-          <h1 class="hero__title reveal">Le couteau suisse de l'IA dans Excel.</h1>
-          <p class="hero__subtitle reveal">
-            AI.Native n'est pas juste un "chat". C'est une suite complète de <strong>14 fonctions spécialisées</strong>
-            pour traiter du texte, structurer des données, traduire et automatiser vos tableaux.
-            <br>Toutes pilotables directement depuis vos cellules.
-          </p>
 
-          <div class="hero__cta reveal">
-            <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer
-              l'extension</a>
-            <a class="btn btn--ghost" href="./docs/index.html">Voir le Wiki</a>
-          </div>
-        </div>
+    <!-- HERO SECTION -->
+    <section class="hero" style="padding-bottom: 20px;">
+      <div class="container" style="text-align:center; max-width:800px;">
+        <div class="pill reveal"><span class="pill__dot" aria-hidden="true"></span>Version 2.0</div>
+        <h1 class="hero__title reveal">Excel, réinventé.</h1>
+        <p class="hero__subtitle reveal" style="margin: 0 auto 30px;">
+          Fini les copier-coller vers ChatGPT. Intégrez l'intelligence artificielle directement au cœur de vos calculs
+          avec <strong>14 fonctions natives</strong> conçues pour la productivité.
+        </p>
       </div>
     </section>
 
-    <!-- SECTION 1: GÉNÉRATION & ANALYSE -->
-    <section class="section">
-      <div class="container">
-        <div class="section__header reveal">
-          <h2 class="section__title">Génération & Analyse</h2>
-          <p class="section__lead">Créez du contenu, résumez des documents et analysez des informations textuelles.</p>
-        </div>
-
-        <div class="grid3">
-          <article class="card reveal">
-            <div class="card__kicker">Généraliste</div>
-            <h3 class="card__title code-title">AI.ASK</h3>
-            <p class="card__text">Posez n'importe quelle question à l'IA, avec ou sans contexte.</p>
-            <div class="card__example">
-              <code>=AI.ASK("Analyse ce feedback"; A2)</code>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__kicker">Synthèse</div>
-            <h3 class="card__title code-title">AI.SUMMARIZE</h3>
-            <p class="card__text">Résumez le contenu d'une cellule ou d'une plage entière en quelques mots.</p>
-            <div class="card__example">
-              <code>=AI.SUMMARIZE(A1:A50)</code>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__kicker">Traduction</div>
-            <h3 class="card__title code-title">AI.TRANSLATE</h3>
-            <p class="card__text">Traduisez massivement vos contenus dans n'importe quelle langue cible.</p>
-            <div class="card__example">
-              <code>=AI.TRANSLATE(A2:A100; "es")</code>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: DONNÉES & STRUCTURE -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section__header reveal">
-          <h2 class="section__title">Données & Structure</h2>
-          <p class="section__lead">Transformez le chaos en tableaux exploitables. Structurez, classez, extrayez.</p>
-        </div>
-
-        <div class="grid3">
-          <article class="card reveal">
-            <div class="card__kicker">Extraction</div>
-            <h3 class="card__title code-title">AI.EXTRACT</h3>
-            <p class="card__text">Extrayez des entités spécifiques (emails, prix, dates) d'un texte en vrac.</p>
-            <div class="card__example">
-              <code>=AI.EXTRACT(A2; "emails")</code>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__kicker">Classification</div>
-            <h3 class="card__title code-title">AI.CLASSIFY</h3>
-            <p class="card__text">Catégorisez automatiquement des lignes selon vos propres labels.</p>
-            <div class="card__example">
-              <code>=AI.CLASSIFY(B2; "Lead|Client|Spam")</code>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__kicker">Tableaux</div>
-            <h3 class="card__title code-title">AI.TABLE</h3>
-            <p class="card__text">Générez un tableau structuré complet à partir d'une simple description.</p>
-            <div class="card__example">
-              <code>=AI.TABLE("Top 10 pays PIB")</code>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: QUALITÉ & WEB -->
-    <section class="section">
-      <div class="container">
-        <div class="section__header reveal">
-          <h2 class="section__title">Web & Qualité</h2>
-          <p class="section__lead">Enrichissez vos données avec le web et assurez leur cohérence.</p>
-        </div>
-
-        <div class="grid3">
-          <article class="card reveal">
-            <div class="card__kicker">Recherche</div>
-            <h3 class="card__title code-title">AI.WEB</h3>
-            <p class="card__text">Interrogez le web en direct. Récupérez des infos à jour avec leurs sources.</p>
-            <div class="card__example">
-              <code>=AI.WEB("CEO de Apple actuel";;1)</code>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__kicker">Nettoyage</div>
-            <h3 class="card__title code-title">AI.CLEAN</h3>
-            <p class="card__text">Normalisez les formats, supprimez les caractères parasites et corrigez la casse.</p>
-            <div class="card__example">
-              <code>=AI.CLEAN(C2:C100)</code>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__kicker">Cohérence</div>
-            <h3 class="card__title code-title">AI.CONSISTENT</h3>
-            <p class="card__text">Harmonisez des listes de valeurs proches (ex: "USA", "U.S.A", "United States").</p>
-            <div class="card__example">
-              <code>=AI.CONSISTENT(D2:D50)</code>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 4: AUTOMATION EXCEL -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section__header reveal">
-          <h2 class="section__title">Outils Excel</h2>
-          <p class="section__lead">Des utilitaires pour vous faire gagner du temps sur Excel même.</p>
-        </div>
-
-        <div class="grid3">
-          <article class="card reveal">
-            <div class="card__kicker">Formules</div>
-            <h3 class="card__title code-title">AI.FORMULA</h3>
-            <p class="card__text">Décrivez ce que vous voulez calculer, obtenez la formule Excel native.</p>
-            <div class="card__example">
-              <code>=AI.FORMULA("Moyenne colonne A si B > 10")</code>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__kicker">Remplissage</div>
-            <h3 class="card__title code-title">AI.FILL</h3>
-            <p class="card__text">Complétez intelligemment une colonne en suivant quelques exemples donnés.</p>
-            <div class="card__example">
-              <code>=AI.FILL(A1:B3; A4:A20; "Format...")</code>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__kicker">Diagnostic</div>
-            <h3 class="card__title code-title">AI.TEST / STATUS</h3>
-            <p class="card__text">Vérifiez vos clés API, le modèle actif et le statut des quotas.</p>
-            <div class="card__example">
-              <code>=AI.KEYSTATUS()</code>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRIVACY (UNCHANGED) -->
-    <section class="section" id="privacy">
-      <div class="container">
-        <h2 class="section__title reveal">Vie privée : pas de serveur intermédiaire.</h2>
-        <p class="section__lead reveal">
-          AI.Native est conçu pour minimiser l’exposition des données. Vous fournissez votre clé API, et les appels
-          partent directement d’Excel vers
-          l’API du fournisseur choisi (OpenAI ou Gemini).
+    <!-- SECTION 1: CRÉATION (The Creator) -->
+    <section class="feature-section container reveal">
+      <div class="feature-section__text">
+        <div class="pill"
+          style="margin-bottom:12px; background:rgba(59, 130, 246, 0.15); border-color:rgba(59, 130, 246, 0.2); color:#60a5fa;">
+          Génération</div>
+        <h2 class="section__title">Rédigez, résumez, traduisez.</h2>
+        <p class="section__lead">
+          Transformez Excel en un assistant de rédaction surpuissant. Générez du contenu marketing, résumez des
+          feedbacks clients ou traduisez des catalogues entiers en une formule.
         </p>
 
-        <div class="highlight reveal">
-          <div class="highlight__panel">
-            <h3>Flux direct Excel → API</h3>
-            <p>
-              Aucune donnée ne transite par un serveur AI.Native. Les informations envoyées sont uniquement celles que
-              vous mettez dans la formule
-              (texte, cellules, plages). Les clés API, le cache et les logs restent stockés localement sur votre
-              appareil.
-            </p>
-
-            <div class="bullets">
-              <div class="bullet">
-                <div class="bullet__icon" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2l8 4v6c0 5-3.6 9.4-8 10-4.4-.6-8-5-8-10V6l8-4Z" stroke="currentColor"
-                      stroke-width="1.8" />
-                  </svg>
-                </div>
-                <div class="bullet__text"><strong>Clé API</strong> : vous l’apportez, vous la gardez.</div>
-              </div>
-              <div class="bullet">
-                <div class="bullet__icon" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                    <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                  </svg>
-                </div>
-                <div class="bullet__text"><strong>Nettoyage</strong> : vous pouvez vider cache et logs depuis le
-                  panneau.</div>
-              </div>
-              <div class="bullet">
-                <div class="bullet__icon" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                  </svg>
-                </div>
-                <div class="bullet__text"><strong>Transparence</strong> : les coûts API restent chez le fournisseur.
-                </div>
-              </div>
-            </div>
-
-            <div style="margin-top: 14px; display:flex; gap:10px; flex-wrap:wrap;">
-              <a class="btn btn--primary" href="./pricing.html">Voir les tarifs</a>
-              <a class="btn" href="./docs/api-keys.html">Obtenir une clé API</a>
+        <div class="feature-list">
+          <div class="feature-list__item">
+            <svg class="feature-list__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <span class="func-tag">AI.ASK</span> Posez n'importe quelle question.
             </div>
           </div>
-
-          <div class="card" style="padding: 14px;">
-            <img alt="Flux de données : Excel vers l’API, sans serveur intermédiaire"
-              src="./assets/illustrations/privacy-flow.svg" />
+          <div class="feature-list__item">
+            <svg class="feature-list__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <span class="func-tag">AI.SUMMARIZE</span> Synthétisez des cellules denses.
+            </div>
+          </div>
+          <div class="feature-list__item">
+            <svg class="feature-list__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <span class="func-tag">AI.TRANSLATE</span> Traduction multilingue instantanée.
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="callout reveal" style="margin-top:14px;">
-          <strong>Note.</strong> Les données transmises sont ensuite traitées par le fournisseur (OpenAI ou Google)
-          conformément à ses propres conditions et politiques.
+      <div class="feature-section__visual">
+        <div class="excel-mockup">
+          <div class="excel-mockup__ribbon"></div>
+          <div class="excel-mockup__bar">
+            <span>fx</span>
+            <span class="excel-mockup__cell--formula">=AI.ASK("Écris un email de relance pour ce client"; A2)</span>
+          </div>
+          <div class="excel-mockup__grid">
+            <!-- Headers -->
+            <div class="excel-mockup__cell excel-mockup__cell--hdr"></div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">A (Prospect)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">B (Situation)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr"
+              style="background:rgba(16, 124, 65, 0.1); color:#107c41;">C (Brouillon IA)</div>
+
+            <!-- Row 1 -->
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">1</div>
+            <div class="excel-mockup__cell">Jean Dupont</div>
+            <div class="excel-mockup__cell">Pas de réponse depuis 10j...</div>
+            <div class="excel-mockup__cell" style="color:var(--muted2);">Génération...</div>
+
+            <!-- Row 2 -->
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">2</div>
+            <div class="excel-mockup__cell">Marie Currie</div>
+            <div class="excel-mockup__cell">Intéressée par la démo...</div>
+            <div class="excel-mockup__cell excel-mockup__cell--active">Bonjour Marie, suite à...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: STRUCTURE (The Architect) -->
+    <section class="feature-section container reveal">
+      <div class="feature-section__text">
+        <div class="pill" style="margin-bottom:12px;">Données</div>
+        <h2 class="section__title">Transformez le chaos en tableaux.</h2>
+        <p class="section__lead">
+          Ne passez plus des heures à nettoyer des données. Extrayez des emails, classifiez des transactions ou générez
+          des tableaux complets à partir de rien.
+        </p>
+
+        <div class="feature-list">
+          <div class="feature-list__item">
+            <svg class="feature-list__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <span class="func-tag">AI.EXTRACT</span> Récupérez emails, prix, dates.
+            </div>
+          </div>
+          <div class="feature-list__item">
+            <svg class="feature-list__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <span class="func-tag">AI.CLASSIFY</span> Catégorisez vos lignes auto.
+            </div>
+          </div>
+          <div class="feature-list__item">
+            <svg class="feature-list__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <span class="func-tag">AI.TABLE</span> Créez de la donnée structurée.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-section__visual">
+        <div class="excel-mockup">
+          <div class="excel-mockup__ribbon"></div>
+          <div class="excel-mockup__bar">
+            <span>fx</span>
+            <span class="excel-mockup__cell--formula">=AI.CLASSIFY(A2; "Logiciel|Materiel|Service")</span>
+          </div>
+          <div class="excel-mockup__grid">
+            <div class="excel-mockup__cell excel-mockup__cell--hdr"></div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">A (Dépense)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">B (Catégorie)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">C (Montant)</div>
+
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">1</div>
+            <div class="excel-mockup__cell">Licence Adobe CC</div>
+            <div class="excel-mockup__cell excel-mockup__cell--active">Logiciel</div>
+            <div class="excel-mockup__cell">59.99 €</div>
+
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">2</div>
+            <div class="excel-mockup__cell">MacBook Pro M3</div>
+            <div class="excel-mockup__cell">Materiel</div>
+            <div class="excel-mockup__cell">2400 €</div>
+
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">3</div>
+            <div class="excel-mockup__cell">Audit sécurité</div>
+            <div class="excel-mockup__cell">Service</div>
+            <div class="excel-mockup__cell">1500 €</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: WEB & QUALITÉ (The Explorer) -->
+    <section class="feature-section container reveal">
+      <div class="feature-section__text">
+        <div class="pill"
+          style="margin-bottom:12px; background:rgba(16, 185, 129, 0.15); border-color:rgba(16, 185, 129, 0.2); color:#34d399;">
+          Web & Qualité</div>
+        <h2 class="section__title">Connecté au monde réel.</h2>
+        <p class="section__lead">
+          Vos données ne sont plus statiques. Interrogez le web en direct pour enrichir vos fichiers et assurez-vous que
+          tout est propre et formaté.
+        </p>
+
+        <div class="feature-list">
+          <div class="feature-list__item">
+            <svg class="feature-list__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <span class="func-tag">AI.WEB</span> Recherche internet en temps réel.
+            </div>
+          </div>
+          <div class="feature-list__item">
+            <svg class="feature-list__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <span class="func-tag">AI.CLEAN</span> Nettoyage et normalisation.
+            </div>
+          </div>
+          <div class="feature-list__item">
+            <svg class="feature-list__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <span class="func-tag">AI.CONSISTENT</span> Harmonisation des termes.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-section__visual">
+        <div class="excel-mockup">
+          <div class="excel-mockup__ribbon"></div>
+          <div class="excel-mockup__bar">
+            <span>fx</span>
+            <span class="excel-mockup__cell--formula">=AI.WEB("Dernier cours de l'action " & A2)</span>
+          </div>
+          <div class="excel-mockup__grid">
+            <div class="excel-mockup__cell excel-mockup__cell--hdr"></div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">A (Ticker)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">B (Prix Live)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">C (Source)</div>
+
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">1</div>
+            <div class="excel-mockup__cell">MSFT</div>
+            <div class="excel-mockup__cell excel-mockup__cell--active">412.50 $</div>
+            <div class="excel-mockup__cell" style="font-size:11px; color:var(--muted);">finance.yahoo...</div>
+
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">2</div>
+            <div class="excel-mockup__cell">GOOGL</div>
+            <div class="excel-mockup__cell">173.40 $</div>
+            <div class="excel-mockup__cell" style="font-size:11px; color:var(--muted);">google.com/fin...</div>
+
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">3</div>
+            <div class="excel-mockup__cell">AAPL</div>
+            <div class="excel-mockup__cell">189.30 $</div>
+            <div class="excel-mockup__cell" style="font-size:11px; color:var(--muted);">nasdaq.com...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: EXCEL TOOLS (The Utilities) -->
+    <section class="section section--alt">
+      <div class="container text-center">
+        <h2 class="section__title reveal" style="text-align:center; margin-bottom:40px;">Les petits plus qui changent
+          tout.</h2>
+
+        <div class="grid3">
+          <article class="card reveal">
+            <div class="card__kicker">Magie</div>
+            <h3 class="card__title code-title">AI.FORMULA</h3>
+            <p class="card__text">Décrivez un calcul en français, obtenez la formule Excel complexe instantanément.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__kicker">Productivité</div>
+            <h3 class="card__title code-title">AI.FILL</h3>
+            <p class="card__text">Remplissez une colonne entière en donnant juste 2 ou 3 exemples à l'IA.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__kicker">Admin</div>
+            <h3 class="card__title code-title">AI.KEYSTATUS</h3>
+            <p class="card__text">Gardez un œil sur votre consommation API, vos modèles actifs et vos quotas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION PRIVACY -->
+    <section class="section" id="privacy">
+      <div class="container reveal">
+        <div class="glass-panel">
+          <div class="glass-panel__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h2 class="gradient-text-lg" style="font-size:36px; margin-bottom:12px;">Vos données, votre clé.</h2>
+          <p class="section__lead" style="margin: 0 auto 30px; font-size:18px;">
+            Contrairement à la plupart des outils IA, <strong>nous ne voyons pas vos données</strong>.
+            AI.Native fonctionne comme un pont direct entre votre Excel et l'API (OpenAI ou Google).
+          </p>
+
+          <div class="grid3" style="text-align:left; max-width:800px; margin:0 auto;">
+            <div class="bullet">
+              <div class="bullet__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg></div>
+              <div class="bullet__text"><strong>BYOK (Bring Your Own Key)</strong> : Vous utilisez votre propre clé API
+                personnelle.</div>
+            </div>
+            <div class="bullet">
+              <div class="bullet__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                  <line x1="12" y1="2" x2="12" y2="12"></line>
+                </svg></div>
+              <div class="bullet__text"><strong>Pas d'intermédiaire</strong> : Le flux est Excel ↔ OpenAI/Google. Point
+                final.</div>
+            </div>
+            <div class="bullet">
+              <div class="bullet__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg></div>
+              <div class="bullet__text"><strong>Local First</strong> : Cache et logs sont stockés sur votre machine, pas
+                dans le cloud.</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 30px;">
+            <a class="btn btn--ghost" href="./legal/privacy.html">Lire la politique de confidentialité</a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- CALL TO ACTION -->
     <section class="section">
-      <div class="container">
-        <h2 class="section__title reveal">Prêt à essayer ?</h2>
-        <p class="section__lead reveal">Installez l’add-in, configurez votre clé, et testez vos premières formules
-          <code>AI.*</code> en quelques minutes.
+      <div class="container" style="text-align:center; padding-bottom:40px;">
+        <h2 class="section__title reveal">Passez à la vitesse supérieure.</h2>
+        <p class="section__lead reveal" style="margin: 10px auto 30px;">
+          Rejoignez les utilisateurs qui gagnent des heures chaque semaine grâce à AI.Native.
         </p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;" class="reveal">
-          <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer depuis
-            Microsoft Store</a>
-          <a class="btn" href="./docs/getting-started.html">Guide de démarrage</a>
+        <div class="reveal" style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
+          <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">
+            Installer maintenant
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="btn" href="./docs/getting-started.html">Voir le guide de démarrage</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer" role="contentinfo">
@@ -344,7 +411,7 @@
         <div>
           <h3 class="footer__title">AI.Native</h3>
           <p class="footer__txt">Des <strong>custom functions AI</strong> dans Excel, avec votre clé API.
-            Confidentialité par design : configuration, cache et logs restent locaux.</p>
+            Confidentialité par design : configuration, cache et logs restent locaux.</p>
         </div>
         <div>
           <div class="footer__title">Produit</div>
