@@ -246,7 +246,9 @@ const ROOT_COMPONENTS = {
       <header class="nav" role="banner">
         <div class="container nav__inner">
           <a class="brand" href="${root}index.html" aria-label="Neurow — Accueil">
-            <div class="brand__mark" aria-hidden="true">AI</div>
+            <div class="brand__mark" aria-hidden="true">
+              <img src="${root}assets/illustrations/logo.jpg" alt="Neurow" width="44" height="44">
+            </div>
             <div class="brand__text">
               <div class="brand__name">Neurow</div>
               <div class="brand__tag">L'IA Native dans Excel</div>
