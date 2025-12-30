@@ -46,38 +46,8 @@
 </head>
 
 <body>
-  <header class="nav" role="banner">
-    <div class="container nav__inner">
-      <a class="brand" href="../index.html" aria-label="Neurow — Accueil">
-        <div class="brand__mark" aria-hidden="true">AI</div>
-        <div class="brand__text">
-          <div class="brand__name">Neurow</div>
-          <div class="brand__tag">Légal</div>
-        </div>
-      </a>
-      <nav class="nav__links" aria-label="Navigation principale">
-        <a data-nav-link href="../index.html">Accueil</a>
-        <a data-nav-link href="../features.html">Features</a>
-        <a data-nav-link href="../pricing.html">Tarifs</a>
-        <a data-nav-link href="../docs/index.html">Wiki</a>
-      </nav>
-      <div class="nav__right">
-        <button id="themeToggle" class="icon-btn" type="button" aria-label="Changer de thème">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8"
-              stroke-linejoin="round" />
-          </svg>
-        </button>
-        <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">
-          Installer (Microsoft Store)
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </header>
+  <site-header root-path="../"></site-header>
+  <site-drawer root-path="../"></site-drawer>
 
   <main class="section">
     <div class="container">
@@ -246,14 +216,7 @@
     </div>
   </main>
 
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__bottom">
-        <span>© <span id="year"></span> Neurow.</span>
-        <span><a href="../legal/privacy.html">Confidentialité</a> · <a href="../legal/terms.html">Conditions</a></span>
-      </div>
-    </div>
-  </footer>
+  <site-footer root-path="../"></site-footer>
 
   <script>document.getElementById("year").textContent = String(new Date().getFullYear());</script>
   <script src="../assets/site.js"></script>

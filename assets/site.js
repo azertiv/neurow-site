@@ -238,13 +238,145 @@ function enhanceCodeBlocks() {
   });
 }
 
+const ROOT_COMPONENTS = {
+  header: class extends HTMLElement {
+    connectedCallback() {
+      const root = this.getAttribute("root-path") || "./";
+      this.innerHTML = `
+      <header class="nav" role="banner">
+        <div class="container nav__inner">
+          <a class="brand" href="${root}index.html" aria-label="Neurow — Accueil">
+            <div class="brand__mark" aria-hidden="true">AI</div>
+            <div class="brand__text">
+              <div class="brand__name">Neurow</div>
+              <div class="brand__tag">L'IA Native dans Excel</div>
+            </div>
+          </a>
+
+          <nav class="nav__links" aria-label="Navigation principale">
+            <a data-nav-link href="${root}index.html">Accueil</a>
+            <a data-nav-link href="${root}features.html">Fonctions</a>
+            <a data-nav-link href="${root}pricing.html">Tarifs</a>
+            <a data-nav-link href="${root}docs/index.html">Wiki</a>
+            <a data-nav-link href="https://neurow.canny.io/feature-requests" target="_blank" style="color: var(--a1); display: inline-flex; align-items: center; gap: 4px;">
+              Roadmap
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+              </svg>
+            </a>
+          </nav>
+
+          <div class="nav__right">
+            <button id="menuToggle" class="icon-btn menu-btn" type="button" aria-label="Ouvrir le menu">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </button>
+
+            <button id="themeToggle" class="icon-btn" type="button" aria-label="Changer de thème">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <a class="btn btn--primary" data-store-link href="${SITE.microsoftStoreUrl}">
+              Installer
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </header>
+      `;
+      // Re-init dependent logic if needed
+      initThemeToggle();
+      initDrawer();
+      initActiveNav();
+    }
+  },
+  drawer: class extends HTMLElement {
+    connectedCallback() {
+      const root = this.getAttribute("root-path") || "./";
+      this.innerHTML = `
+      <div id="drawer" class="drawer" aria-hidden="true">
+        <div class="drawer__backdrop" data-drawer-close></div>
+        <div class="drawer__panel">
+          <div class="drawer__top">
+            <strong>Menu</strong>
+            <button class="icon-btn" data-drawer-close type="button" aria-label="Fermer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+          <a href="${root}index.html">Accueil</a>
+          <a href="${root}features.html">Fonctions</a>
+          <a href="${root}pricing.html">Tarifs</a>
+          <a href="${root}docs/index.html">Wiki</a>
+          <a href="https://neurow.canny.io/feature-requests" target="_blank" style="color: var(--a1); display: inline-flex; align-items: center; gap: 4px;">
+            Roadmap
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17l9.2-9.2M17 17V7H7"/>
+            </svg>
+          </a>
+          <a data-store-link href="${SITE.microsoftStoreUrl}">Installer (Microsoft Store)</a>
+        </div>
+      </div>
+      `;
+      initDrawer(); // Bind events
+    }
+  },
+  footer: class extends HTMLElement {
+    connectedCallback() {
+      const root = this.getAttribute("root-path") || "./";
+      this.innerHTML = `
+      <footer class="footer" role="contentinfo">
+        <div class="container">
+          <div class="footer__grid">
+            <div>
+              <h3 class="footer__title">Neurow</h3>
+              <p class="footer__txt">L'IA Native dans Excel. Vos données, votre clé API, votre sécurité.</p>
+            </div>
+            <div>
+              <div class="footer__title">Produit</div>
+              <div class="footer__links">
+                <a href="${root}features.html">Fonctions</a>
+                <a href="${root}pricing.html">Tarifs</a>
+                <a href="${root}docs/index.html">Wiki</a>
+              </div>
+            </div>
+            <div>
+              <div class="footer__title">Légal</div>
+              <div class="footer__links">
+                <a href="mailto:contact@ai-native.com" data-support-email>Contact</a>
+                <a href="${root}legal/privacy.html">Confidentialité</a>
+                <a href="${root}legal/terms.html">CGU</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <span>© <span id="year">${new Date().getFullYear()}</span> Neurow. Tous droits réservés.</span>
+          </div>
+        </div>
+      </footer>
+      `;
+    }
+  }
+};
+
+customElements.define('site-header', ROOT_COMPONENTS.header);
+customElements.define('site-drawer', ROOT_COMPONENTS.drawer);
+customElements.define('site-footer', ROOT_COMPONENTS.footer);
+
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   applyConfig();
-  initThemeToggle();
-  initDrawer();
+  // Components init their own listeners when connected
+  // initThemeToggle(); // handled by site-header
+  // initDrawer();      // handled by site-header/site-drawer
   initReveal();
-  initActiveNav();
+  // initActiveNav();   // handled by site-header
   initDocsSearch();
   enhanceCodeBlocks();
   initCannyBanner();
