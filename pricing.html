@@ -89,7 +89,7 @@
         Les tokens restent facturés par le fournisseur (OpenAI ou Google) via votre clé.
       </p>
 
-      <div class="pricing" style="margin-top: 18px;">
+      <div class="pricing" style="margin-top: 24px;">
         <div class="plan reveal">
           <div class="plan__top">
             <div>
@@ -137,12 +137,12 @@
         </div>
       </div>
 
-      <div class="callout callout--warn reveal" style="margin-top: 14px;">
+      <div class="callout callout--warn reveal" style="margin-top: 24px;">
         <strong>*Notes.</strong> Les fonctionnalités “web search” dépendent du modèle et des capacités du fournisseur.
         Vos quotas et coûts API sont déterminés par votre compte OpenAI ou Google.
       </div>
 
-      <hr class="sep" />
+      <hr class="sep" style="margin: 40px 0;" />
 
       <h2 class="section__title reveal" style="margin-top: 0;">Pourquoi passer Pro ?</h2>
       <p class="section__lead reveal">La version gratuite est une simple démo technique. La version Pro est votre outil
@@ -170,18 +170,36 @@
             </tr>
             <tr>
               <td>Recherche Web (AI.WEB)</td>
-              <td>Non</td>
-              <td><strong>Oui</strong></td>
+              <td><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" style="opacity:0.3;">
+                  <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg></td>
+              <td><strong><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="stroke: var(--ok);"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg></strong></td>
             </tr>
             <tr>
               <td>Utilisation commerciale</td>
-              <td>Non</td>
-              <td>Oui</td>
+              <td><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" style="opacity:0.3;">
+                  <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg></td>
+              <td><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="stroke: var(--ok);"
+                  stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg></td>
             </tr>
             <tr>
               <td>Cache & Logs</td>
-              <td>Oui</td>
-              <td>Oui</td>
+              <td><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="stroke: var(--ok);"
+                  stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg></td>
+              <td><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="stroke: var(--ok);"
+                  stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg></td>
             </tr>
             <tr>
               <td>Support</td>
@@ -194,14 +212,50 @@
 
       <div class="section section--tight" style="padding-bottom: 0;">
         <div class="card reveal">
-          <div class="card__kicker">Question fréquente</div>
-          <h3 class="card__title">Pourquoi un abonnement si j’apporte ma clé API ?</h3>
-          <p class="card__text">
-            Parce que la valeur est dans l’<strong>expérience Excel</strong> : fonctions pensées pour les feuilles
-            (spill, batch, formules),
-            UI de configuration, cache, logs, déduplication, et une intégration propre “sans options dans la formule”.
-          </p>
-          <div style="margin-top: 12px; display:flex; gap:10px; flex-wrap:wrap;">
+          <div class="card__kicker">Simulation</div>
+          <h3 class="card__title">Combien mon abonnement va-t-il me coûter au total ?</h3>
+          <div class="card__text">
+            <p style="margin-bottom: 16px;">
+              L'abonnement AI.Native (5.99$) s'ajoute au coût de vos tokens API.
+              Avec les modèles modernes très abordables, le coût API est souvent négligeable pour un usage bureautique.
+            </p>
+
+            <div style="border-radius: 12px; border: 1px solid var(--stroke); padding: 16px; margin-top: 10px;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <span>Abonnement AI.Native</span>
+                <strong>$5.99 / mois</strong>
+              </div>
+              <div
+                style="display:flex; justify-content:space-between; margin-bottom:8px; padding-bottom:8px; border-bottom: 1px dashed var(--stroke);">
+                <span>
+                  Coût API estimé
+                  <span style="display:block; font-size:0.85em; color:var(--muted); font-weight:normal;">Gemini 3.0
+                    Flash ou GPT-5 Mini</span>
+                </span>
+                <strong>~ $1.50 / mois</strong>
+              </div>
+              <div
+                style="display:flex; justify-content:space-between; align-items:center; color: var(--ok); font-size: 1.1em;">
+                <strong>Total mensuel</strong>
+                <strong>~ $7.50 / mois</strong>
+              </div>
+            </div>
+
+            <details style="margin-top: 12px; font-size: 0.9em; color: var(--muted);">
+              <summary style="cursor: pointer; user-select: none;">Voir la méthodologie de calcul</summary>
+              <div style="margin-top: 8px; padding-left: 12px; border-left: 2px solid var(--stroke);">
+                <p style="margin: 0 0 8px;">Basé sur une utilisation bureautique intensive (~1000 requêtes/mois).</p>
+                <ul style="margin: 0; padding-left: 16px; list-style-type: disc;">
+                  <li style="margin-bottom: 4px;"><strong>Volume :</strong> 1.5M tokens en entrée (contexte) + 0.3M
+                    tokens en sortie (génération).</li>
+                  <li style="margin-bottom: 4px;"><strong>Gemini 3.0 Flash :</strong> $0.50/1M (In) + $3.00/1M (Out) ≈
+                    $1.65.</li>
+                  <li><strong>GPT-5 Mini :</strong> $0.25/1M (In) + $2.00/1M (Out) ≈ $0.98.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+          <div style="margin-top: 18px; display:flex; gap:10px; flex-wrap:wrap;">
             <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer /
               S’abonner</a>
             <a class="btn" href="./docs/index.html">Lire le wiki</a>

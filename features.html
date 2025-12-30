@@ -145,22 +145,28 @@
           <div class="excel-mockup__grid">
             <!-- Headers -->
             <div class="excel-mockup__cell excel-mockup__cell--hdr"></div>
-            <div class="excel-mockup__cell excel-mockup__cell--hdr">A (Prospect)</div>
-            <div class="excel-mockup__cell excel-mockup__cell--hdr">B (Situation)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">A (Input)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">B (Function)</div>
             <div class="excel-mockup__cell excel-mockup__cell--hdr"
-              style="background:rgba(16, 124, 65, 0.1); color:#107c41;">C (Brouillon IA)</div>
+              style="background:rgba(16, 124, 65, 0.1); color:#107c41;">C (Result)</div>
 
-            <!-- Row 1 -->
+            <!-- Row 1: AI.ASK -->
             <div class="excel-mockup__cell excel-mockup__cell--hdr">1</div>
-            <div class="excel-mockup__cell">Jean Dupont</div>
-            <div class="excel-mockup__cell">Pas de réponse depuis 10j...</div>
-            <div class="excel-mockup__cell" style="color:var(--muted2);">Génération...</div>
+            <div class="excel-mockup__cell">Write a follow-up...</div>
+            <div class="excel-mockup__cell"><span class="func-tag">AI.ASK</span></div>
+            <div class="excel-mockup__cell">Bonjour Jean, je me...</div>
 
-            <!-- Row 2 -->
+            <!-- Row 2: AI.TRANSLATE -->
             <div class="excel-mockup__cell excel-mockup__cell--hdr">2</div>
-            <div class="excel-mockup__cell">Marie Currie</div>
-            <div class="excel-mockup__cell">Intéressée par la démo...</div>
-            <div class="excel-mockup__cell excel-mockup__cell--active">Bonjour Marie, suite à...</div>
+            <div class="excel-mockup__cell">Strategic meeting...</div>
+            <div class="excel-mockup__cell"><span class="func-tag">AI.TRANSLATE</span></div>
+            <div class="excel-mockup__cell excel-mockup__cell--active">Réunion stratégique...</div>
+
+            <!-- Row 3: AI.SUMMARIZE -->
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">3</div>
+            <div class="excel-mockup__cell">Meeting notes: ...</div>
+            <div class="excel-mockup__cell"><span class="func-tag">AI.SUMMARIZE</span></div>
+            <div class="excel-mockup__cell">Client wants X, Y, Z.</div>
           </div>
         </div>
       </div>
@@ -219,24 +225,29 @@
           </div>
           <div class="excel-mockup__grid">
             <div class="excel-mockup__cell excel-mockup__cell--hdr"></div>
-            <div class="excel-mockup__cell excel-mockup__cell--hdr">A (Dépense)</div>
-            <div class="excel-mockup__cell excel-mockup__cell--hdr">B (Catégorie)</div>
-            <div class="excel-mockup__cell excel-mockup__cell--hdr">C (Montant)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">A (Raw Text)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">B (Function)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">C (Result)</div>
 
             <div class="excel-mockup__cell excel-mockup__cell--hdr">1</div>
-            <div class="excel-mockup__cell">Licence Adobe CC</div>
-            <div class="excel-mockup__cell excel-mockup__cell--active">Logiciel</div>
-            <div class="excel-mockup__cell">59.99 €</div>
+            <div class="excel-mockup__cell">Contact: Jean...</div>
+            <div class="excel-mockup__cell"><span class="func-tag">AI.EXTRACT</span></div>
+            <div class="excel-mockup__cell excel-mockup__cell--active">sales@company.com</div>
 
             <div class="excel-mockup__cell excel-mockup__cell--hdr">2</div>
-            <div class="excel-mockup__cell">MacBook Pro M3</div>
-            <div class="excel-mockup__cell">Materiel</div>
-            <div class="excel-mockup__cell">2400 €</div>
+            <div class="excel-mockup__cell">Starbucks 5.50$</div>
+            <div class="excel-mockup__cell"><span class="func-tag">AI.CLASSIFY</span></div>
+            <div class="excel-mockup__cell">Meals & Ent.</div>
 
             <div class="excel-mockup__cell excel-mockup__cell--hdr">3</div>
-            <div class="excel-mockup__cell">Audit sécurité</div>
-            <div class="excel-mockup__cell">Service</div>
-            <div class="excel-mockup__cell">1500 €</div>
+            <div class="excel-mockup__cell">Invoice #4592...</div>
+            <div class="excel-mockup__cell"><span class="func-tag">AI.EXTRACT</span></div>
+            <div class="excel-mockup__cell">2025-01-05</div>
+
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">4</div>
+            <div class="excel-mockup__cell">List top 3 planets</div>
+            <div class="excel-mockup__cell"><span class="func-tag">AI.TABLE</span></div>
+            <div class="excel-mockup__cell">Jupiter | Saturn...</div>
           </div>
         </div>
       </div>
@@ -297,24 +308,29 @@
           </div>
           <div class="excel-mockup__grid">
             <div class="excel-mockup__cell excel-mockup__cell--hdr"></div>
-            <div class="excel-mockup__cell excel-mockup__cell--hdr">A (Ticker)</div>
-            <div class="excel-mockup__cell excel-mockup__cell--hdr">B (Prix Live)</div>
-            <div class="excel-mockup__cell excel-mockup__cell--hdr">C (Source)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">A (Input)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">B (Function)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">C (Result)</div>
 
             <div class="excel-mockup__cell excel-mockup__cell--hdr">1</div>
-            <div class="excel-mockup__cell">MSFT</div>
-            <div class="excel-mockup__cell excel-mockup__cell--active">412.50 $</div>
-            <div class="excel-mockup__cell" style="font-size:11px; color:var(--muted);">finance.yahoo...</div>
+            <div class="excel-mockup__cell">CEO of Microsoft</div>
+            <div class="excel-mockup__cell"><span class="func-tag">AI.WEB</span></div>
+            <div class="excel-mockup__cell excel-mockup__cell--active">Satya Nadella</div>
 
             <div class="excel-mockup__cell excel-mockup__cell--hdr">2</div>
-            <div class="excel-mockup__cell">GOOGL</div>
-            <div class="excel-mockup__cell">173.40 $</div>
-            <div class="excel-mockup__cell" style="font-size:11px; color:var(--muted);">google.com/fin...</div>
+            <div class="excel-mockup__cell">Stock Price NVDA</div>
+            <div class="excel-mockup__cell"><span class="func-tag">AI.WEB</span></div>
+            <div class="excel-mockup__cell">875.20 $</div>
 
             <div class="excel-mockup__cell excel-mockup__cell--hdr">3</div>
-            <div class="excel-mockup__cell">AAPL</div>
-            <div class="excel-mockup__cell">189.30 $</div>
-            <div class="excel-mockup__cell" style="font-size:11px; color:var(--muted);">nasdaq.com...</div>
+            <div class="excel-mockup__cell"> john DOE </div>
+            <div class="excel-mockup__cell"><span class="func-tag">AI.CLEAN</span></div>
+            <div class="excel-mockup__cell">John Doe</div>
+
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">4</div>
+            <div class="excel-mockup__cell">U.S.A</div>
+            <div class="excel-mockup__cell"><span class="func-tag">AI.CONSISTENT</span></div>
+            <div class="excel-mockup__cell">USA</div>
           </div>
         </div>
       </div>
@@ -374,25 +390,24 @@
           </div>
           <div class="excel-mockup__grid">
             <div class="excel-mockup__cell excel-mockup__cell--hdr"></div>
-            <div class="excel-mockup__cell excel-mockup__cell--hdr">C</div>
-            <div class="excel-mockup__cell excel-mockup__cell--hdr">D</div>
-            <div class="excel-mockup__cell excel-mockup__cell--hdr">E</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">A (Your Request)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">B (Result)</div>
+            <div class="excel-mockup__cell excel-mockup__cell--hdr">C (Context)</div>
 
             <div class="excel-mockup__cell excel-mockup__cell--hdr">1</div>
-            <div class="excel-mockup__cell" style="font-family:var(--mono); color:#4ade80;">=AVERAGEIF(A:A;"Lundi";B:B)
-            </div>
-            <div class="excel-mockup__cell"></div>
-            <div class="excel-mockup__cell"></div>
+            <div class="excel-mockup__cell">Average if Monday...</div>
+            <div class="excel-mockup__cell" style="font-family:var(--mono); color:#4ade80;">=AVERAGEIF(...)</div>
+            <div class="excel-mockup__cell"><span class="func-tag">AI.FORMULA</span></div>
 
             <div class="excel-mockup__cell excel-mockup__cell--hdr">2</div>
-            <div class="excel-mockup__cell">...</div>
-            <div class="excel-mockup__cell"></div>
-            <div class="excel-mockup__cell"></div>
+            <div class="excel-mockup__cell">Jan 2024</div>
+            <div class="excel-mockup__cell">Feb 2024</div>
+            <div class="excel-mockup__cell"><span class="func-tag">AI.FILL</span></div>
 
             <div class="excel-mockup__cell excel-mockup__cell--hdr">3</div>
-            <div class="excel-mockup__cell"></div>
-            <div class="excel-mockup__cell"></div>
-            <div class="excel-mockup__cell"></div>
+            <div class="excel-mockup__cell">John.Doe</div>
+            <div class="excel-mockup__cell">john.doe@...</div>
+            <div class="excel-mockup__cell"><span class="func-tag">AI.FILL</span></div>
           </div>
         </div>
       </div>

@@ -1593,6 +1593,7 @@ h3[id] {
   padding: 16px 20px;
   text-align: left;
   border-bottom: 1px solid var(--stroke);
+  vertical-align: middle;
 }
 
 .pricing-table th {
@@ -1658,4 +1659,29 @@ h3[id] {
   font-style: italic;
   margin-top: 4px;
   display: block;
+}
+
+/* Code snippets in cards */
+.code-block {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--a2);
+  overflow-x: auto;
+}
+
+[data-theme="light"] .code-block {
+  background: rgba(9, 18, 43, 0.05);
+  border-color: rgba(9, 18, 43, 0.1);
+  color: var(--a1);
+}
+
+/* Card Icon */
+.card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
