@@ -730,6 +730,8 @@ textarea {
   box-shadow: var(--shadow2);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .plan--pro {
@@ -787,7 +789,8 @@ textarea {
 }
 
 .plan__cta {
-  margin-top: 16px;
+  margin-top: auto;
+  padding-top: 16px;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -1516,6 +1519,56 @@ h3[id] {
   flex-shrink: 0;
 }
 
+/* Feature Descriptions */
+.feature-desc {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* Privacy Box (Enhanced) */
+.privacy-box {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 48px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3);
+}
+
+.privacy-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+}
+
+.privacy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(251, 191, 36, 0.15);
+  /* Gold tint */
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  color: #fbbf24;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+}
+
 /* Tag style for function names */
 .func-tag {
   font-family: var(--mono);
@@ -1525,4 +1578,84 @@ h3[id] {
   padding: 2px 6px;
   border-radius: 4px;
   border: 1px solid rgba(249, 115, 22, 0.2);
+}
+
+/* Pricing Table Styles */
+.pricing-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 20px;
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--stroke);
+}
+
+.pricing-table th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.pricing-table td {
+  color: var(--txt);
+  font-size: 15px;
+}
+
+.pricing-table td:first-child {
+  font-weight: 500;
+  color: var(--muted);
+}
+
+/* Highlight Row for Key Features */
+.highlight-row {
+  background: rgba(249, 115, 22, 0.08);
+  /* Light orange tint */
+}
+
+.highlight-row td {
+  border-bottom-color: rgba(249, 115, 22, 0.2);
+  color: var(--heading);
+  font-weight: 600;
+}
+
+.highlight-row td:first-child {
+  color: var(--heading);
+}
+
+/* Column Highlighting */
+.pricing-table th:nth-child(3),
+.pricing-table td:nth-child(3) {
+  background: rgba(255, 255, 255, 0.03);
+  width: 30%;
+}
+
+.pricing-table th:last-child {
+  border-radius: 12px 12px 0 0;
+}
+
+.pricing-table tr:last-child td:last-child {
+  border-radius: 0 0 12px 12px;
+  border-bottom: none;
+}
+
+[data-theme="light"] .highlight-row {
+  background: rgba(249, 115, 22, 0.06);
+}
+
+[data-theme="light"] .pricing-table th:nth-child(3),
+[data-theme="light"] .pricing-table td:nth-child(3) {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.txt-subtle {
+  font-size: 0.85em;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 4px;
+  display: block;
 }

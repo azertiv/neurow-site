@@ -93,16 +93,16 @@
         <div class="plan reveal">
           <div class="plan__top">
             <div>
-              <p class="plan__name">Essai gratuit</p>
-              <p class="plan__tag">Pour tester dans un fichier réel, sans engagement.</p>
+              <p class="plan__name">Version d'essai</p>
+              <p class="plan__tag">Pour tester la compatibilité et les fonctions.</p>
             </div>
             <span class="badge">Démo</span>
           </div>
-          <div class="plan__price"><strong>0€</strong><span>/mois</span></div>
+          <div class="plan__price"><strong>0€</strong></div>
           <ul class="plan__list">
-            <li><strong><span data-free-requests>5</span> requêtes/jour</strong> (limite démonstration)</li>
+            <li><strong><span data-free-requests>5</span> requêtes/jour</strong> (limite stricte)</li>
             <li>Accès au panneau de configuration</li>
-            <li>Accès aux fonctions AI.* (selon limites démo)</li>
+            <li>Accès aux fonctions AI.* pour test</li>
           </ul>
           <div class="plan__cta">
             <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer</a>
@@ -114,23 +114,25 @@
           <div class="plan__top">
             <div>
               <p class="plan__name">Pro</p>
-              <p class="plan__tag">Pour un usage intensif dans vos modèles Excel.</p>
+              <p class="plan__tag">Productivité illimitée pour vos modèles.</p>
             </div>
             <span class="badge">Recommandé</span>
           </div>
-          <div class="plan__price"><strong><span data-price>€5</span></strong><span><span
-                data-period>/mois</span></span></div>
+          <div class="plan__price">
+            <div><strong>$5.99</strong><span>/mois</span></div>
+            <div style="font-size: 0.55em; color: var(--ok); margin-top: 4px; font-weight: 600;">ou <strong>$59 /
+                an</strong> (2 mois offerts)</div>
+          </div>
           <ul class="plan__list">
-            <li>Accès complet à l’extension</li>
-            <li>Recherche web avec sources (AI.WEB)*</li>
-            <li>Cache intelligent (moins de tokens)</li>
-            <li>Logs et estimation de coûts</li>
-            <li>Mises à jour + support</li>
+            <li>Requêtes <strong>illimitées</strong></li>
+            <li>Accès complet à toutes les fonctions</li>
+            <li>Recherche web avec sources (AI.WEB)</li>
+            <li>Cache intelligent & Logs détaillés</li>
+            <li>Support prioritaire</li>
           </ul>
           <div class="plan__cta">
             <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer /
               S’abonner</a>
-            <a class="btn" href="./docs/api-keys.html">Configurer une clé</a>
           </div>
         </div>
       </div>
@@ -142,63 +144,49 @@
 
       <hr class="sep" />
 
-      <h2 class="section__title reveal" style="margin-top: 0;">Comparatif détaillé</h2>
-      <p class="section__lead reveal">Une vue “checklist” pour trancher rapidement.</p>
+      <h2 class="section__title reveal" style="margin-top: 0;">Pourquoi passer Pro ?</h2>
+      <p class="section__lead reveal">La version gratuite est une simple démo technique. La version Pro est votre outil
+        de travail.</p>
 
-      <div class="reveal" style="overflow:auto; margin-top: 14px;">
-        <table class="table" aria-label="Comparatif">
+      <div class="reveal" style="overflow:auto; margin-top: 24px;">
+        <table class="table pricing-table" aria-label="Comparatif">
           <thead>
             <tr>
               <th>Fonctionnalité</th>
-              <th>Essai gratuit</th>
-              <th>Pro</th>
+              <th>Version d'essai</th>
+              <th>Version Pro</th>
             </tr>
           </thead>
           <tbody>
+            <tr class="highlight-row">
+              <td><strong>Requêtes quotidiennes</strong></td>
+              <td>Max 5 / jour</td>
+              <td><strong>Illimitées</strong></td>
+            </tr>
             <tr>
-              <td>Installation depuis Microsoft Store</td>
+              <td>Fonctions IA (AI.ASK, etc.)</td>
+              <td>Oui (pour test)</td>
+              <td>Oui (Optimisé PROD)</td>
+            </tr>
+            <tr>
+              <td>Recherche Web (AI.WEB)</td>
+              <td>Non</td>
+              <td><strong>Oui</strong></td>
+            </tr>
+            <tr>
+              <td>Utilisation commerciale</td>
+              <td>Non</td>
+              <td>Oui</td>
+            </tr>
+            <tr>
+              <td>Cache & Logs</td>
               <td>Oui</td>
               <td>Oui</td>
             </tr>
             <tr>
-              <td>Clés API (stockées en local)</td>
-              <td>Oui</td>
-              <td>Oui</td>
-            </tr>
-            <tr>
-              <td>Choix du fournisseur et du modèle dans le panneau</td>
-              <td>Oui</td>
-              <td>Oui</td>
-            </tr>
-            <tr>
-              <td>Max output tokens (réglage unique)</td>
-              <td>Oui</td>
-              <td>Oui</td>
-            </tr>
-            <tr>
-              <td>Fonctions AI.* (ASK, TRANSLATE, …)</td>
-              <td>Limité</td>
-              <td>Complet</td>
-            </tr>
-            <tr>
-              <td>AI.WEB (recherche web + sources)</td>
-              <td>Limité</td>
-              <td>Complet*</td>
-            </tr>
-            <tr>
-              <td>Cache intelligent (moins de tokens)</td>
-              <td>Oui</td>
-              <td>Oui</td>
-            </tr>
-            <tr>
-              <td>Logs + estimation coûts</td>
-              <td>Oui</td>
-              <td>Oui</td>
-            </tr>
-            <tr>
-              <td>Support & mises à jour</td>
-              <td>Best effort</td>
-              <td>Prioritaire</td>
+              <td>Support</td>
+              <td>Communautaire</td>
+              <td><strong>Prioritaire</strong></td>
             </tr>
           </tbody>
         </table>

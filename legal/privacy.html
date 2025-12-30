@@ -1,87 +1,262 @@
 <!doctype html>
 <html lang="fr" data-theme="dark">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Politique de confidentialité — AI.Native</title>
+  <title>Politique de confidentialité — Neurow</title>
   <meta name="theme-color" content="#0B1020" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="../assets/styles.css" />
+  <meta name="description"
+    content="Politique de confidentialité de l'extension Neurow pour Excel. Transparence totale : aucun backend, stockage local, et connexion directe aux API IA." />
+  <style>
+    .section-icon {
+      width: 28px;
+      height: 28px;
+      color: var(--a0);
+      margin-right: 12px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      margin-top: 48px;
+    }
+
+    .warning-card {
+      background: rgba(251, 191, 36, 0.05);
+      border: 1px solid rgba(251, 191, 36, 0.2);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 32px 0;
+    }
+
+    .warning-title {
+      color: var(--warning);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 0;
+      font-size: 20px;
+    }
+  </style>
 </head>
+
 <body>
-<header class="nav" role="banner">
-  <div class="container nav__inner">
-    <a class="brand" href="../index.html" aria-label="AI.Native — Accueil">
-      <div class="brand__mark" aria-hidden="true">AI</div>
-      <div class="brand__text">
-        <div class="brand__name">AI.Native</div>
-        <div class="brand__tag">Légal</div>
-      </div>
-    </a>
-    <nav class="nav__links" aria-label="Navigation principale">
-  <a data-nav-link href="../index.html">Accueil</a>
-  <a data-nav-link href="../features.html">Features</a>
-  <a data-nav-link href="../pricing.html">Tarifs</a>
-  <a data-nav-link href="../docs/index.html">Wiki</a>
-</nav>
-    <div class="nav__right">
-      <button id="themeToggle" class="icon-btn" type="button" aria-label="Changer de thème">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">
-        Installer (Microsoft Store)
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a class="brand" href="../index.html" aria-label="AI.Native — Accueil">
+        <div class="brand__mark" aria-hidden="true">AI</div>
+        <div class="brand__text">
+          <div class="brand__name">AI.Native</div>
+          <div class="brand__tag">Légal</div>
+        </div>
       </a>
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a data-nav-link href="../index.html">Accueil</a>
+        <a data-nav-link href="../features.html">Features</a>
+        <a data-nav-link href="../pricing.html">Tarifs</a>
+        <a data-nav-link href="../docs/index.html">Wiki</a>
+      </nav>
+      <div class="nav__right">
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Changer de thème">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">
+          Installer (Microsoft Store)
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main class="section">
-  <div class="container">
-    <article class="doc">
-      
-<h1>Politique de confidentialité (modèle)</h1>
-<p><em>Ce document est un modèle à adapter avant publication sur le Microsoft Store.</em></p>
+  <main class="section">
+    <div class="container">
+      <article class="doc">
 
-<h2>1) Données traitées par l’extension</h2>
-<p>AI.Native traite les données nécessaires à l’exécution des fonctions IA dans Excel : le texte de vos prompts, et éventuellement des valeurs de cellules (plages) que vous fournissez en contexte.</p>
+        <div class="section__head" style="align-items: flex-start; flex-direction: column; gap: 4px;">
+          <h1 class="section__title" style="font-size: 42px;">Politique de confidentialité</h1>
+          <p class="section__lead">Dernière mise à jour : 30 Décembre 2025</p>
+        </div>
 
-<h2>2) Absence de serveur AI.Native</h2>
-<p>AI.Native ne met pas en place de serveur intermédiaire. Les requêtes sont envoyées directement depuis votre environnement Office vers le fournisseur choisi (OpenAI ou Google Gemini).</p>
+        <div class="card"
+          style="margin-bottom: 32px; border-color: rgba(52, 211, 153, 0.3); background: rgba(52, 211, 153, 0.05);">
+          <h3 style="margin-top:0; color: var(--ok); display: flex; align-items: center; gap: 10px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+              <line x1="6" y1="6" x2="6.01" y2="6"></line>
+              <line x1="6" y1="18" x2="6.01" y2="18"></line>
+            </svg>
+            Architecture "No Backend"
+          </h3>
+          <p class="card__text" style="color: var(--txt);">
+            <strong>Neurow est une extension "Client-Side Only".</strong> Nous ne possédons aucun serveur pour traiter
+            vos données.
+            Vos fichiers Excel, vos clés API et vos prompts ne transitent jamais par nos systèmes.
+            L'extension fait le lien direct entre votre Excel et les fournisseurs d'IA (Google/OpenAI).
+          </p>
+        </div>
 
-<h2>3) Stockage local</h2>
-<ul>
-  <li>Les clés API sont stockées localement (OfficeRuntime.storage ou localStorage).</li>
-  <li>AI.Native peut stocker localement un cache de réponses et des logs techniques (diagnostic).</li>
-</ul>
+        <h2>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          1. Introduction
+        </h2>
+        <p>
+          La présente politique de confidentialité décrit comment l'extension <strong>Neurow</strong> (éditée par
+          AI.Native) traite, protège et utilise vos données.
+          Notre philosophie est simple : vos données vous appartiennent, et nous avons conçu l'architecture de Neurow
+          pour qu'il soit techniquement impossible pour nous d'y accéder.
+        </p>
 
-<h2>4) Partage avec des tiers</h2>
-<p>Les données envoyées via les appels API sont partagées avec le fournisseur choisi (OpenAI ou Google) conformément à leurs conditions et politiques. AI.Native ne revend pas ces données et ne les traite pas sur un serveur propre.</p>
+        <h2>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+            </path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+          2. Collecte et Transmission des Données
+        </h2>
+        <h3>2.1 Données que vous fournissez volontairement</h3>
+        <p>Pour utiliser Neurow, vous devez fournir vos propres clés API (Google Gemini ou OpenAI). Ces clés sont
+          utilisées pour authentifier les requêtes que vous lancez depuis Excel.</p>
 
-<h2>5) Gestion et suppression</h2>
-<p>Vous pouvez supprimer les caches et logs depuis le panneau AI.Native. Vous pouvez effacer vos clés API depuis le panneau.</p>
+        <h3>2.2 Transmission aux Fournisseurs Tiers (AI Providers)</h3>
+        <p>Lorsque vous exécutez une fonction (par exemple <code>=AI.ASK(...)</code>), Neurow transmet uniquement :</p>
+        <ul>
+          <li>Le prompt (texte) contenu dans la formule.</li>
+          <li>Le contexte éventuel (plage de cellules sélectionnée).</li>
+          <li>Les paramètres techniques (température, modèle choisi).</li>
+        </ul>
+        <p>Ces données sont envoyées directement aux API de <strong>Google (Gemini)</strong> ou <strong>OpenAI</strong>
+          via une connexion chiffrée (HTTPS). Aucune de ces données ne passe par un serveur contrôlé par Neurow.</p>
 
-<h2>6) Contact</h2>
-<p>Support : <a data-support-email href="mailto:support@example.com">support@example.com</a></p>
+        <h2>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          3. Stockage Local (Sur votre appareil)
+        </h2>
+        <p>Neurow privilégie le stockage local pour garantir votre sécurité et améliorer les performances.</p>
 
-    </article>
-  </div>
-</main>
+        <h3>3.1 Clés API</h3>
+        <p>
+          Vos clés API sont stockées exclusivement sur votre appareil, via les mécanismes sécurisés du navigateur ou
+          d'Office (<code>OfficeRuntime.storage</code> ou <code>localStorage</code>).
+          Elles ne sont jamais envoyées ailleurs qu'aux serveurs d'authentification des fournisseurs respectifs (Google
+          ou OpenAI).
+        </p>
 
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__bottom">
-      <span>© <span id="year"></span> AI.Native.</span>
-      <span><a href="../legal/privacy.html">Confidentialité</a> · <a href="../legal/terms.html">Conditions</a></span>
+        <h3>3.2 Cache et Logs</h3>
+        <p>Pour éviter de refacturer des appels identiques et pour vous permettre de suivre votre consommation :</p>
+        <ul>
+          <li><strong>Cache :</strong> Les réponses des IA sont mises en cache localement sur votre machine (avec une
+            durée de vie limitée) pour accélérer l'affichage.</li>
+          <li><strong>Logs d'utilisation :</strong> Un historique technique (nombre de tokens, latence, coût estimé,
+            erreurs) est conservé localement pour alimenter votre tableau de bord.</li>
+        </ul>
+        <p>Vous avez le contrôle total sur ces données et pouvez les effacer à tout moment via le bouton <em>"Vider le
+            cache"</em> ou <em>"Effacer"</em> dans le panneau de configuration.</p>
+
+        <!-- Warning Card for Third Party Services -->
+        <div class="warning-card">
+          <h2 class="warning-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+            4. Note importante sur les services tiers
+          </h2>
+          <p style="color: var(--txt); opacity: 0.9; margin-top: 10px;">
+            L'utilisation de Neurow implique l'envoi de données aux fournisseurs d'IA que vous choisissez (Google Gemini
+            ou OpenAI). Ces échanges sont régis par leurs conditions respectives.
+          </p>
+
+          <div style="margin-top: 16px; margin-bottom: 16px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="btn btn--ghost"
+              style="font-size: 13px; padding: 8px 12px;">Google Privacy Policy ↗</a>
+            <a href="https://openai.com/privacy/" target="_blank" rel="noopener" class="btn btn--ghost"
+              style="font-size: 13px; padding: 8px 12px;">OpenAI Privacy Policy ↗</a>
+          </div>
+
+          <p style="font-size: 14px; margin-bottom: 0;">
+            <em>Nous vous conseillons de vérifier que vos clés API sont configurées pour ne pas autoriser l'entraînement
+              des modèles sur vos données (option généralement active par défaut pour les API payantes).</em>
+          </p>
+        </div>
+
+        <h2>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+            </path>
+            <line x1="1" y1="1" x2="23" y2="23"></line>
+          </svg>
+          5. Absence de système de suivi (Analytics)
+        </h2>
+        <p>
+          Neurow n'intègre aucun traceur publicitaire ni aucun outil d'analyse comportementale (type Google Analytics)
+          qui enverrait des données sur votre usage à nous ou à des tiers.
+        </p>
+
+        <h2>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          6. Modification et Contact
+        </h2>
+        <p>
+          Nous pouvons mettre à jour cette politique pour refléter des changements techniques (nouveaux fournisseurs
+          supportés).
+          Puisque nous n'avons pas votre email (nous ne gérons pas de comptes utilisateurs), nous vous invitons à
+          consulter cette page régulièrement.
+        </p>
+        <p>
+          Pour toute question concernant cette politique ou la sécurité de l'extension, vous pouvez nous contacter à
+          :<br>
+          <strong>Email :</strong> <a href="mailto:contact@ai-native.dev">contact@ai-native.dev</a>
+        </p>
+
+      </article>
     </div>
-  </div>
-</footer>
+  </main>
 
-<script>document.getElementById("year").textContent = String(new Date().getFullYear());</script>
-<script src="../assets/site.js"></script>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> AI.Native.</span>
+        <span><a href="../legal/privacy.html">Confidentialité</a> · <a href="../legal/terms.html">Conditions</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = String(new Date().getFullYear());</script>
+  <script src="../assets/site.js"></script>
 </body>
+
 </html>
