@@ -79,132 +79,181 @@
   <main id="content">
     <section class="hero">
       <div class="container hero__grid">
-        <div>
-          <div class="pill reveal"><span class="pill__dot" aria-hidden="true"></span>Features</div>
-          <h1 class="hero__title reveal">Tout ce qu’il faut pour mettre l’IA au cœur d’Excel.</h1>
+        <div style="grid-column: 1 / -1; max-width: 800px;">
+          <div class="pill reveal"><span class="pill__dot" aria-hidden="true"></span>Fonctions</div>
+          <h1 class="hero__title reveal">Le couteau suisse de l'IA dans Excel.</h1>
           <p class="hero__subtitle reveal">
-            AI.Native transforme Excel en environnement IA “formula-first” : vous écrivez <code>AI.*</code> comme une
-            fonction classique,
-            vous choisissez le fournisseur (OpenAI / Gemini) et le modèle dans le panneau, et vous gardez la maîtrise
-            des coûts via votre propre clé API.
+            AI.Native n'est pas juste un "chat". C'est une suite complète de <strong>14 fonctions spécialisées</strong>
+            pour traiter du texte, structurer des données, traduire et automatiser vos tableaux.
+            <br>Toutes pilotables directement depuis vos cellules.
           </p>
 
           <div class="hero__cta reveal">
-            <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer</a>
-            <a class="btn btn--ghost" href="./docs/getting-started.html">Démarrer (Wiki)</a>
+            <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer
+              l'extension</a>
+            <a class="btn btn--ghost" href="./docs/index.html">Voir le Wiki</a>
           </div>
-
-          <div class="hero__meta reveal" aria-label="Points clés">
-            <span><span class="kbd">AI.*</span> fonctions IA prêtes</span>
-            <span><span class="kbd">OpenAI/Gemini</span> même fichier, même formules</span>
-            <span><span class="kbd">Ops</span> cache & logs locaux</span>
-            <span><span class="kbd">Privacy</span> sans serveur intermédiaire</span>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card__kicker">En pratique</div>
-          <h3 class="card__title">Vous gardez le contrôle</h3>
-          <p class="card__text">
-            L’extension est volontairement “config-driven” : les choix importants se font dans le panneau (fournisseur,
-            modèle, limites),
-            pas dans chaque formule.
-          </p>
-          <ul class="card__list">
-            <li>Un classeur reste lisible, même partagé.</li>
-            <li>Les réglages peuvent être ajustés sans réécrire les formules.</li>
-            <li>Vos données partent directement d’Excel vers l’API du fournisseur.</li>
-          </ul>
         </div>
       </div>
     </section>
 
+    <!-- SECTION 1: GÉNÉRATION & ANALYSE -->
     <section class="section">
       <div class="container">
-        <h2 class="section__title reveal">Une bibliothèque de fonctions IA pour vos workflows.</h2>
-        <p class="section__lead reveal">
-          Les fonctions <code>AI.*</code> couvrent les cas d’usage Excel les plus fréquents : rédaction, classification,
-          extraction, génération de formules,
-          structuration en tableau… et recherche web quand vous en avez besoin.
-        </p>
+        <div class="section__header reveal">
+          <h2 class="section__title">Génération & Analyse</h2>
+          <p class="section__lead">Créez du contenu, résumez des documents et analysez des informations textuelles.</p>
+        </div>
 
         <div class="grid3">
           <article class="card reveal">
-            <div class="card__kicker">Texte & analyse</div>
-            <h3 class="card__title">Rédiger, expliquer, résumer</h3>
-            <p class="card__text">Produisez du texte exploitable à partir de cellules, plages ou consignes.</p>
-            <ul class="card__list">
-              <li><code>AI.ASK</code> — question/réponse avec contexte</li>
-              <li><code>AI.SUMMARIZE</code> — synthèse d’un texte ou d’un tableau</li>
-              <li><code>AI.CLEAN</code> — nettoyage et normalisation de texte</li>
-            </ul>
+            <div class="card__kicker">Généraliste</div>
+            <h3 class="card__title code-title">AI.ASK</h3>
+            <p class="card__text">Posez n'importe quelle question à l'IA, avec ou sans contexte.</p>
+            <div class="card__example">
+              <code>=AI.ASK("Analyse ce feedback"; A2)</code>
+            </div>
           </article>
 
           <article class="card reveal">
-            <div class="card__kicker">Données</div>
-            <h3 class="card__title">Extraire & classer</h3>
-            <p class="card__text">Transformez des données semi-structurées en colonnes utilisables.</p>
-            <ul class="card__list">
-              <li><code>AI.EXTRACT</code> — extraction de champs</li>
-              <li><code>AI.CLASSIFY</code> — catégories, tags, labels</li>
-              <li><code>AI.TABLE</code> — tableau “prêt Excel” en sortie</li>
-            </ul>
+            <div class="card__kicker">Synthèse</div>
+            <h3 class="card__title code-title">AI.SUMMARIZE</h3>
+            <p class="card__text">Résumez le contenu d'une cellule ou d'une plage entière en quelques mots.</p>
+            <div class="card__example">
+              <code>=AI.SUMMARIZE(A1:A50)</code>
+            </div>
           </article>
 
           <article class="card reveal">
-            <div class="card__kicker">Automatisation Excel</div>
-            <h3 class="card__title">Formules & remplissage</h3>
-            <p class="card__text">Accélérez la construction de modèles et la mise en forme des sorties.</p>
-            <ul class="card__list">
-              <li><code>AI.FORMULA</code> — génère une formule à partir d’une intention</li>
-              <li><code>AI.FILL</code> — complétion/réécriture sur une plage</li>
-              <li><code>AI.CONSISTENT</code> — cohérence et normalisation</li>
-            </ul>
+            <div class="card__kicker">Traduction</div>
+            <h3 class="card__title code-title">AI.TRANSLATE</h3>
+            <p class="card__text">Traduisez massivement vos contenus dans n'importe quelle langue cible.</p>
+            <div class="card__example">
+              <code>=AI.TRANSLATE(A2:A100; "es")</code>
+            </div>
           </article>
-        </div>
-
-        <div style="margin-top: 14px; display:flex; gap:10px; flex-wrap:wrap;" class="reveal">
-          <a class="btn btn--primary" href="./docs/functions/ask.html">Voir la référence complète</a>
-          <a class="btn" href="./docs/index.html">Ouvrir le Wiki</a>
         </div>
       </div>
     </section>
 
+    <!-- SECTION 2: DONNÉES & STRUCTURE -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Données & Structure</h2>
+          <p class="section__lead">Transformez le chaos en tableaux exploitables. Structurez, classez, extrayez.</p>
+        </div>
+
+        <div class="grid3">
+          <article class="card reveal">
+            <div class="card__kicker">Extraction</div>
+            <h3 class="card__title code-title">AI.EXTRACT</h3>
+            <p class="card__text">Extrayez des entités spécifiques (emails, prix, dates) d'un texte en vrac.</p>
+            <div class="card__example">
+              <code>=AI.EXTRACT(A2; "emails")</code>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__kicker">Classification</div>
+            <h3 class="card__title code-title">AI.CLASSIFY</h3>
+            <p class="card__text">Catégorisez automatiquement des lignes selon vos propres labels.</p>
+            <div class="card__example">
+              <code>=AI.CLASSIFY(B2; "Lead|Client|Spam")</code>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__kicker">Tableaux</div>
+            <h3 class="card__title code-title">AI.TABLE</h3>
+            <p class="card__text">Générez un tableau structuré complet à partir d'une simple description.</p>
+            <div class="card__example">
+              <code>=AI.TABLE("Top 10 pays PIB")</code>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: QUALITÉ & WEB -->
     <section class="section">
       <div class="container">
-        <h2 class="section__title reveal">Recherche web intégrée, avec des sources.</h2>
-        <p class="section__lead reveal">
-          Besoin d’une information externe dans un tableau Excel ? <code>AI.WEB</code> permet d’interroger le web et de
-          récupérer une réponse exploitable,
-          avec affichage optionnel des sources.
-        </p>
+        <div class="section__header reveal">
+          <h2 class="section__title">Web & Qualité</h2>
+          <p class="section__lead">Enrichissez vos données avec le web et assurez leur cohérence.</p>
+        </div>
 
-        <div class="grid2">
+        <div class="grid3">
           <article class="card reveal">
-            <div class="card__kicker">AI.WEB</div>
-            <h3 class="card__title">Réponse + liens</h3>
-            <p class="card__text">Conçu pour la veille, les benchmarks, la vérification rapide et la génération de notes
-              avec sources.</p>
-            <ul class="card__list">
-              <li>Réponse adaptée à une cellule ou une matrice “spill”.</li>
-              <li>Sources listées sous forme de liens (quand activé).</li>
-            </ul>
+            <div class="card__kicker">Recherche</div>
+            <h3 class="card__title code-title">AI.WEB</h3>
+            <p class="card__text">Interrogez le web en direct. Récupérez des infos à jour avec leurs sources.</p>
+            <div class="card__example">
+              <code>=AI.WEB("CEO de Apple actuel";;1)</code>
+            </div>
           </article>
 
           <article class="card reveal">
-            <div class="card__kicker">Structuration</div>
-            <h3 class="card__title">Pensé pour Excel</h3>
-            <p class="card__text">L’objectif n’est pas “un chat dans Excel”, mais des sorties stables et réutilisables
-              dans un modèle.</p>
-            <ul class="card__list">
-              <li>Moins d’options dans les formules : configuration centralisée.</li>
-              <li>Réduction des prompts répétitifs grâce au panneau.</li>
-            </ul>
+            <div class="card__kicker">Nettoyage</div>
+            <h3 class="card__title code-title">AI.CLEAN</h3>
+            <p class="card__text">Normalisez les formats, supprimez les caractères parasites et corrigez la casse.</p>
+            <div class="card__example">
+              <code>=AI.CLEAN(C2:C100)</code>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__kicker">Cohérence</div>
+            <h3 class="card__title code-title">AI.CONSISTENT</h3>
+            <p class="card__text">Harmonisez des listes de valeurs proches (ex: "USA", "U.S.A", "United States").</p>
+            <div class="card__example">
+              <code>=AI.CONSISTENT(D2:D50)</code>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- SECTION 4: AUTOMATION EXCEL -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Outils Excel</h2>
+          <p class="section__lead">Des utilitaires pour vous faire gagner du temps sur Excel même.</p>
+        </div>
+
+        <div class="grid3">
+          <article class="card reveal">
+            <div class="card__kicker">Formules</div>
+            <h3 class="card__title code-title">AI.FORMULA</h3>
+            <p class="card__text">Décrivez ce que vous voulez calculer, obtenez la formule Excel native.</p>
+            <div class="card__example">
+              <code>=AI.FORMULA("Moyenne colonne A si B > 10")</code>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__kicker">Remplissage</div>
+            <h3 class="card__title code-title">AI.FILL</h3>
+            <p class="card__text">Complétez intelligemment une colonne en suivant quelques exemples donnés.</p>
+            <div class="card__example">
+              <code>=AI.FILL(A1:B3; A4:A20; "Format...")</code>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__kicker">Diagnostic</div>
+            <h3 class="card__title code-title">AI.TEST / STATUS</h3>
+            <p class="card__text">Vérifiez vos clés API, le modèle actif et le statut des quotas.</p>
+            <div class="card__example">
+              <code>=AI.KEYSTATUS()</code>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACY (UNCHANGED) -->
     <section class="section" id="privacy">
       <div class="container">
         <h2 class="section__title reveal">Vie privée : pas de serveur intermédiaire.</h2>
@@ -273,6 +322,7 @@
       </div>
     </section>
 
+    <!-- CALL TO ACTION -->
     <section class="section">
       <div class="container">
         <h2 class="section__title reveal">Prêt à essayer ?</h2>

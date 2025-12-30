@@ -133,12 +133,55 @@ function initDocsSearch() {
   const nav = $("#docsNav");
   if (!input || !nav) return;
 
-  const items = $all("a", nav).map((a) => ({ a, text: (a.textContent || "").toLowerCase() }));
+  // Build items with title text, content will be loaded async
+  const items = $all("a", nav).map((a) => ({
+    a,
+    title: (a.textContent || "").toLowerCase(),
+    content: "", // Will be populated after fetch
+    href: a.getAttribute("href")
+  }));
+
+  // Fetch page content for each link
+  async function loadPageContents() {
+    for (const it of items) {
+      if (!it.href) continue;
+      try {
+        const response = await fetch(it.href);
+        if (response.ok) {
+          const html = await response.text();
+          // Parse HTML and extract main content text
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, "text/html");
+          // Get main content area (article or main element)
+          const main = doc.querySelector(".docs-content") || doc.querySelector("article") || doc.querySelector("main") || doc.body;
+          // Extract text content, remove extra whitespace
+          it.content = (main.textContent || "").toLowerCase().replace(/\s+/g, " ").trim();
+        }
+      } catch (e) {
+        // Silently fail for individual pages
+        console.warn(`Could not load content for ${it.href}:`, e);
+      }
+    }
+  }
+
+  // Load contents in background
+  loadPageContents();
+
   input.addEventListener("input", () => {
     const q = (input.value || "").trim().toLowerCase();
     for (const it of items) {
-      const hit = !q || it.text.includes(q);
+      // Search in title OR content
+      const hitTitle = !q || it.title.includes(q);
+      const hitContent = !q || it.content.includes(q);
+      const hit = hitTitle || hitContent;
       it.a.style.display = hit ? "" : "none";
+
+      // Visual indicator when match is in content but not title
+      if (hit && !hitTitle && hitContent && q) {
+        it.a.classList.add("content-match");
+      } else {
+        it.a.classList.remove("content-match");
+      }
     }
     // Hide empty group labels
     $all("[data-nav-group]", nav).forEach((g) => {
@@ -188,7 +231,7 @@ function enhanceCodeBlocks() {
         range.selectNodeContents(code || pre);
         sel.removeAllRanges();
         sel.addRange(range);
-        try { document.execCommand("copy"); } catch {}
+        try { document.execCommand("copy"); } catch { }
         sel.removeAllRanges();
       }
     });

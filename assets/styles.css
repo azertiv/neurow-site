@@ -964,6 +964,19 @@ details.faq__item p {
   border-color: rgba(249, 115, 22, 0.18);
 }
 
+/* Visual indicator for search matches in page content (not title) */
+.sidebar__nav a.content-match {
+  font-style: italic;
+  position: relative;
+}
+
+.sidebar__nav a.content-match::after {
+  content: "•";
+  margin-left: 6px;
+  color: var(--accent);
+  font-size: 10px;
+}
+
 .doc {
   grid-column: 2;
   background: rgba(255, 255, 255, 0.03);
