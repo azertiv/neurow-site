@@ -86,29 +86,24 @@
     <section class="hero">
       <div class="container hero__grid">
         <div>
-          <div class="pill reveal"><span class="pill__dot" aria-hidden="true"></span>Excel + IA, directement dans vos
-            formules</div>
-          <h1 class="hero__title reveal">Des <span class="grad">custom functions AI</span> natives dans Excel — avec
-            votre clé API.</h1>
+          <div class="pill reveal"><span class="pill__dot" aria-hidden="true"></span>L'Intelligence Artificielle de
+            Google & OpenAI</div>
+          <h1 class="hero__title reveal">L'IA, enfin dans vos <span class="grad">formules Excel</span>.</h1>
           <p class="hero__subtitle reveal">
-            AI.Native ajoute un namespace <strong>AI.*</strong> à Excel (ASK, WEB, TRANSLATE, CLASSIFY, FORMULA,
-            TABLE…).
-            Vous configurez une fois le fournisseur (<strong>OpenAI</strong> ou <strong>Gemini</strong>) et le modèle
-            dans le panneau,
-            puis vous utilisez l’IA comme une fonction Excel — dans n’importe quel classeur.
-            Les requêtes partent <strong>directement</strong> d’Excel vers l’API du fournisseur : <strong>aucun serveur
-              intermédiaire</strong>.
+            Générez du texte, traduisez vos contenus, catégorisez vos données et interrogez le web directement depuis
+            vos cellules.
+            <br>
+            Connectez votre propre clé API (OpenAI ou Gemini) et travaillez sans limites.
           </p>
           <div class="hero__cta reveal">
             <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer depuis
               Microsoft Store</a>
-            <a class="btn btn--ghost" href="./docs/getting-started.html">Démarrer en 3 minutes</a>
+            <a class="btn btn--ghost" href="./docs/getting-started.html">Comment ça marche ?</a>
           </div>
           <div class="hero__meta reveal" aria-label="Points clés">
-            <span><span class="kbd">AI.*</span> une bibliothèque de fonctions IA</span>
-            <span><span class="kbd">Panneau</span> fournisseur & modèle centralisés</span>
-            <span><span class="kbd">Cache</span> évite la surconsommation de tokens</span>
-            <span><span class="kbd">Sans serveur</span> Excel → API, sans intermédiaire</span>
+            <span><span class="kbd">Simple</span> Une simple formule =AI.ASK()</span>
+            <span><span class="kbd">Privé</span> Connexion directe à l'IA</span>
+            <span><span class="kbd">Économique</span> Payez vos tokens au prix coûtant</span>
           </div>
         </div>
 
@@ -183,21 +178,24 @@
 
     <section class="section section--tight">
       <div class="container">
-        <div class="kpi reveal" aria-label="Points clés">
+        <div class="section__head" style="margin-bottom: 30px; text-align: center;">
+          <h2 class="section__title reveal">Démarrage express</h2>
+        </div>
+        <div class="kpi reveal" aria-label="Étapes">
           <div class="card">
-            <div class="card__kicker">Architecture</div>
-            <strong>Excel → API, en direct</strong>
-            <span>Aucun serveur AI.Native : votre poste appelle OpenAI ou Gemini avec votre clé.</span>
+            <div class="card__kicker">Étape 1</div>
+            <strong>Installez l'extension</strong>
+            <span>Ajoutez AI.Native depuis le Microsoft Store. Compatible PC, Mac et Web.</span>
           </div>
           <div class="card">
-            <div class="card__kicker">Performance</div>
-            <strong>Cache & déduplication</strong>
-            <span>Réduit les appels identiques : moins de tokens consommés, moins de latence.</span>
+            <div class="card__kicker">Étape 2</div>
+            <strong>Connectez votre IA</strong>
+            <span>Entrez votre clé API (OpenAI ou Gemini) dans le panneau latéral. Elle reste stockée chez vous.</span>
           </div>
           <div class="card">
-            <div class="card__kicker">Fiabilité</div>
-            <strong>Logs & diagnostics</strong>
-            <span>Pour comprendre un résultat, diagnostiquer une clé, et stabiliser vos fichiers.</span>
+            <div class="card__kicker">Étape 3</div>
+            <strong>Utilisez =AI.ASK()</strong>
+            <span>C'est tout. Appelez l'IA directement dans vos cellules comme une formule classique.</span>
           </div>
         </div>
       </div>
@@ -207,57 +205,54 @@
       <div class="container">
         <div class="section__head">
           <div>
-            <h2 class="section__title reveal">Conçu pour les vrais workflows Excel</h2>
-            <p class="section__lead reveal">Des fonctions IA <em>prédictibles</em> qui se comportent comme des fonctions
-              Excel : sortie texte, matrices, remplissage de colonnes, génération de tableaux et de formules.</p>
+            <h2 class="section__title reveal">Dites adieu au copier-coller</h2>
+            <p class="section__lead reveal">Automatisez vos tâches répétitives directement dans vos tableaux, sans
+              jongler entre Excel et ChatGPT.</p>
           </div>
         </div>
 
         <div class="grid3">
           <article class="card reveal">
-            <div class="card__kicker">Fonctions AI.*</div>
-            <h3 class="card__title">Une bibliothèque de custom functions IA</h3>
-            <p class="card__text">Des fonctions prêtes à l’emploi pour automatiser l’analyse, la rédaction et la mise en
-              forme directement dans Excel.</p>
+            <div class="card__kicker">Marketing & Sales</div>
+            <h3 class="card__title">Enrichissement de données</h3>
+            <p class="card__text">Qualifiez des listes de prospects, nettoyez des adresses mal formatées, ou triez des
+              feedbacks clients en quelques secondes.</p>
             <ul class="card__list">
-              <li><strong>ASK</strong>, <strong>SUMMARIZE</strong>, <strong>TRANSLATE</strong>,
-                <strong>CLASSIFY</strong>, <strong>EXTRACT</strong>…</li>
-              <li>Fonctionne sur cellules <em>et</em> plages (A1:B50).</li>
-              <li>Sorties adaptées à Excel : texte ou matrices “spill”.</li>
+              <li><code>=AI.CLASSIFY(A2; "Lead chaud|Froid")</code></li>
+              <li><code>=AI.EXTRACT(B2; "Email")</code></li>
             </ul>
           </article>
 
           <article class="card reveal">
-            <div class="card__kicker">Recherche structurée</div>
-            <h3 class="card__title">AI.WEB avec sources</h3>
-            <p class="card__text">Interrogez le web, récupérez une réponse exploitable, et (si vous le souhaitez)
-              affichez les liens de sources dans la feuille.</p>
+            <div class="card__kicker">Opérations & International</div>
+            <h3 class="card__title">Traduction & Rédaction</h3>
+            <p class="card__text">Traduisez des catalogues entiers ou générez des descriptions produits standardisées en
+              masse.</p>
             <ul class="card__list">
-              <li>Idéal pour KPI, veille, benchmarks, vérification rapide.</li>
-              <li>Réponses stables et utilisables dans des tableaux.</li>
+              <li><code>=AI.TRANSLATE(A2:A100; "es")</code></li>
+              <li><code>=AI.ASK("Génère une description courte"; C2)</code></li>
             </ul>
           </article>
 
           <article class="card reveal">
-            <div class="card__kicker">Ops</div>
-            <h3 class="card__title">Cache, logs et contrôle des coûts</h3>
-            <p class="card__text">Un panneau “Ops” pour suivre l’activité, estimer la consommation, et diagnostiquer
-              rapidement un classeur.</p>
+            <div class="card__kicker">Recherche</div>
+            <h3 class="card__title">Veille & Analyse</h3>
+            <p class="card__text">Interrogez le web pour enrichir vos analyses de marché avec des données fraîches,
+              introuvables dans le dataset de l'IA.</p>
             <ul class="card__list">
-              <li>Cache intelligent pour limiter les tokens.</li>
-              <li>Logs locaux + actions “vider cache / effacer logs”.</li>
+              <li><code>=AI.WEB("Prix moyen iPhone 15 France")</code></li>
+              <li>Réponses factuelles avec sources citées.</li>
             </ul>
           </article>
         </div>
 
         <div style="margin-top: 18px" class="highlight reveal">
           <div class="highlight__panel">
-            <h3>Vie privée : pas d’intermédiaire</h3>
+            <h3>Vos données vous appartiennent</h3>
             <p>
-              AI.Native n’ajoute aucun serveur intermédiaire : vos requêtes partent de l’add-in vers l’API
-              (OpenAI/Gemini), avec votre clé API.
-              Les clés, le cache et les logs sont stockés localement sur votre appareil — et vous pouvez les effacer à
-              tout moment.
+              Contrairement à d'autres outils, AI.Native n'intercepte pas vos données.
+              Vos formules Excel envoient les requêtes <strong>directement</strong> aux serveurs sécurisés d'OpenAI ou
+              Google, sans passer par chez nous.
             </p>
             <div class="bullets">
               <div class="bullet">
@@ -267,7 +262,7 @@
                       stroke-width="1.8" />
                   </svg>
                 </div>
-                <div class="bullet__text"><strong>Clés API locales</strong> : pas d’envoi vers un serveur tiers.</div>
+                <div class="bullet__text"><strong>Connexion directe</strong> : Excel communique seul avec l'IA.</div>
               </div>
               <div class="bullet">
                 <div class="bullet__icon" aria-hidden="true">
@@ -275,23 +270,13 @@
                     <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
                   </svg>
                 </div>
-                <div class="bullet__text"><strong>Paramètres centralisés</strong> : fournisseur, modèle et tokens se
-                  règlent dans le panneau.</div>
-              </div>
-              <div class="bullet">
-                <div class="bullet__icon" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                  </svg>
-                </div>
-                <div class="bullet__text"><strong>Coûts maîtrisés</strong> : max tokens partagé + cache + déduplication.
-                </div>
+                <div class="bullet__text"><strong>Clés stockées localement</strong> : elles ne quittent jamais votre
+                  ordinateur.</div>
               </div>
             </div>
 
             <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-              <a class="btn btn--primary" href="./features.html#privacy">Découvrir la vie privée</a>
-              <a class="btn" href="./docs/functions/ask.html">Voir les fonctions</a>
+              <a class="btn btn--primary" href="./features.html#privacy">En savoir plus sur la sécurité</a>
             </div>
           </div>
 
@@ -307,12 +292,12 @@
       <div class="container">
         <div class="section__head">
           <div>
-            <h2 class="section__title reveal">Tarifs simples</h2>
-            <p class="section__lead reveal">Vous payez l’accès à l’extension. Les coûts d’API restent chez le
-              fournisseur (vous utilisez votre clé).</p>
+            <h2 class="section__title reveal">Une tarification transparente</h2>
+            <p class="section__lead reveal">L'extension est un achat unique ou mensuel. Vous payez ensuite votre
+              consommation IA directement à OpenAI ou Google, à prix coûtant.</p>
           </div>
           <div class="reveal">
-            <a class="btn" href="./pricing.html">Comparer les offres</a>
+            <a class="btn" href="./pricing.html">Voir les détails</a>
           </div>
         </div>
 
@@ -320,20 +305,18 @@
           <div class="plan reveal">
             <div class="plan__top">
               <div>
-                <p class="plan__name">Essai gratuit</p>
-                <p class="plan__tag">Pour tester et valider vos cas d’usage.</p>
+                <p class="plan__name">Gratuit</p>
+                <p class="plan__tag">Parfait pour tester.</p>
               </div>
               <span class="badge">Démo</span>
             </div>
-            <div class="plan__price"><strong>0€</strong><span>/mois</span></div>
+            <div class="plan__price"><strong>0€</strong></div>
             <ul class="plan__list">
-              <li><strong><span data-free-requests>5</span> requêtes/jour</strong> (limite démonstration)</li>
-              <li>Accès aux fonctions principales</li>
-              <li>Configuration locale identique</li>
+              <li><strong><span data-free-requests>5</span> requêtes/jour</strong></li>
+              <li>Accès à toutes les fonctions</li>
             </ul>
             <div class="plan__cta">
               <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer</a>
-              <a class="btn" href="./docs/getting-started.html">Démarrer</a>
             </div>
           </div>
 
@@ -341,28 +324,26 @@
             <div class="plan__top">
               <div>
                 <p class="plan__name">Pro</p>
-                <p class="plan__tag">Usage quotidien, au cœur de vos fichiers Excel.</p>
+                <p class="plan__tag">Pour les pros d'Excel.</p>
               </div>
               <span class="badge">Recommandé</span>
             </div>
-            <div class="plan__price"><strong><span data-price>€5</span></strong><span><span
+            <div class="plan__price"><strong><span data-price>5€</span></strong><span><span
                   data-period>/mois</span></span></div>
             <ul class="plan__list">
-              <li>Accès complet aux fonctions</li>
-              <li>Cache + logs + outils de diagnostic</li>
-              <li>Mises à jour et support</li>
+              <li>Requêtes illimitées</li>
+              <li>Support prioritaire</li>
+              <li>Mises à jour incluses</li>
             </ul>
             <div class="plan__cta">
-              <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer /
-                S’abonner</a>
-              <a class="btn" href="./docs/api-keys.html">Configurer une clé API</a>
+              <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">S'abonner</a>
             </div>
           </div>
         </div>
 
         <div class="callout reveal" style="margin-top: 14px;">
-          <strong>Important.</strong> AI.Native n’est pas un revendeur de tokens : votre facturation API est gérée par
-          OpenAI ou Google selon la clé utilisée.
+          <strong>Note :</strong> Vous aurez besoin d'un compte OpenAI ou Google AI Studio (souvent gratuit pour
+          démarrer) pour obtenir une clé API.
         </div>
       </div>
     </section>
@@ -378,50 +359,24 @@
 
         <div class="faq">
           <details class="faq__item reveal">
-            <summary>Mes données passent-elles par vos serveurs ?</summary>
-            <p>Non. L’add-in appelle directement l’API du fournisseur (OpenAI ou Gemini) depuis votre environnement
-              Excel. Aucun serveur AI.Native n’est interposé. Vos clés API, le cache et les logs sont stockés localement
-              sur votre machine.</p>
+            <summary>Mes données sont-elles confidentielles ?</summary>
+            <p>Oui. L'extension fait le pont directement entre Excel et l'IA (OpenAI ou Gemini). Nous n'avons aucun
+              accès à vos données, et vos clés d'accès restent stockées sur votre ordinateur.</p>
           </details>
           <details class="faq__item reveal">
-            <summary>Quels modèles sont supportés ?</summary>
-            <p>L'extension est optimisée pour des modèles rapides et économiques comme <strong>Gemini 1.5 Flash</strong>
-              et <strong>GPT-4o mini</strong>. Vous pouvez choisir et configurer le modèle précis dans le panneau
-              latéral.</p>
+            <summary>Ai-je besoin d'un abonnement ChatGPT ou Gemini ?</summary>
+            <p>Non, mais il vous faut une "clé API". C'est un code qui permet d'utiliser l'IA. Vous pouvez en créer une
+              gratuitement sur les sites développeurs d'OpenAI ou Google (Google offre même un accès gratuit généreux).
+            </p>
           </details>
           <details class="faq__item reveal">
-            <summary>Pourquoi le fournisseur n’est-il pas dans la formule ?</summary>
-            <p>C'est un choix de design pour la portabilité. Vous définissez le fournisseur (OpenAI ou Gemini) dans le
-              panneau latéral. Ainsi, vos formules restent propres (ex: <code>=AI.ASK(...)</code>) et fonctionnent chez
-              vos collègues, quel que soit leur fournisseur configuré.</p>
+            <summary>Est-ce compatible avec mon ordinateur ?</summary>
+            <p>Oui, AI.Native fonctionne sur Excel pour Windows, Excel pour Mac, et Excel Online (Web).</p>
           </details>
           <details class="faq__item reveal">
-            <summary>Comment fonctionne la recherche web (AI.WEB) ?</summary>
-            <p>La fonction <code>AI.WEB</code> utilise les outils de recherche natifs des fournisseurs (Google Search
-              pour Gemini, Bing Search pour OpenAI). Elle peut retourner une réponse synthétisée ou les sources brutes
-              si vous le demandez via l'argument <code>showSource</code>.</p>
-          </details>
-          <details class="faq__item reveal">
-            <summary>Y a-t-il des limites de volume ou de taille ?</summary>
-            <p>Oui, Excel impose une limite de 32 000 caractères par cellule. De plus, pour garantir la stabilité, les
-              fonctions de plage (comme TRANSLATE ou EXTRACT) traitent les cellules par lots de 200 maximum.</p>
-          </details>
-          <details class="faq__item reveal">
-            <summary>Comment maîtriser les coûts ?</summary>
-            <p>L'extension intègre un cache local agressif : si vous relancez la même requête, elle ne coûte rien (0
-              token). De plus, le panneau "Ops" vous permet de suivre votre consommation estimée et de définir des
-              limites de tokens.</p>
-          </details>
-          <details class="faq__item reveal">
-            <summary>Que faire en cas d'erreur #N/A ou #BUSY ?</summary>
-            <p>Utilisez la fonction <code>=AI.KEYSTATUS()</code> pour vérifier si votre clé API est valide, ou
-              <code>=AI.TEST()</code> pour tester la connexion. Consultez l'onglet "Utilisation" du panneau pour voir
-              les logs d'erreurs détaillés.</p>
-          </details>
-          <details class="faq__item reveal">
-            <summary>Est-ce compatible Windows, Mac et Web ?</summary>
-            <p>Oui ! AI.Native utilise les technologies web modernes d'Office (Office.js). Elle fonctionne sur Excel
-              pour Windows, Excel pour Mac, et Excel Online (version Web).</p>
+            <summary>Quelle différence avec Copilot ?</summary>
+            <p>Vous payez votre consommation au réel (souvent quelques centimes) au lieu d'un abonnement mensuel élevé.
+              De plus, vous avez le choix du modèle d'IA et plus de contrôle sur les résultats.</p>
           </details>
         </div>
       </div>
@@ -432,15 +387,15 @@
         <div class="card reveal"
           style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap: wrap;">
           <div>
-            <div class="card__kicker">Prêt à l’essayer ?</div>
-            <h3 class="card__title" style="margin:8px 0 6px;">Installez AI.Native et lancez votre première formule en 3
-              minutes.</h3>
-            <p class="card__text">Le wiki vous guide pas à pas, y compris l’obtention d’une clé API pour OpenAI et
-              Gemini.</p>
+            <div class="card__kicker">Prêt à transformer votre Excel ?</div>
+            <h3 class="card__title" style="margin:8px 0 6px;">Installez l'extension et lancez votre première formule en
+              3 minutes.</h3>
+            <p class="card__text">Démarrez gratuitement, aucune carte bancaire requise pour l'installation.</p>
           </div>
           <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer</a>
-            <a class="btn" href="./docs/getting-started.html">Wiki : démarrage</a>
+            <a class="btn btn--primary" data-store-link href="https://www.microsoft.com/store/apps">Installer
+              maintenant</a>
+            <a class="btn" href="./docs/getting-started.html">Voir le guide</a>
           </div>
         </div>
       </div>
